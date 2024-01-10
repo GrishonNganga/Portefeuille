@@ -45,7 +45,6 @@ const generateBlogHtmlPage = async (htmlContent, fileName) => {
     const html = converter.makeHtml(htmlContent)
     console.log("HTML", html)
     console.log("HTML DIR", htmlFilesDirectory)
-    path.join(process.cwd(), 'posts')
     fs.writeFile(htmlFilesDirectory + fileName + ".html", html, err => {
         if (err) {
             console.error(err);
