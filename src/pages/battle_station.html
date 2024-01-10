@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Station</title>
+    <link href="../css/input.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=Silkscreen&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <section data-router-wrapper class="w-full h-screen">
+        <div data-router-view="professional-page" class="w-full h-full">
+            <div class="absolute w-full h-full bg-gradient-to-b from-[#3B3038] to-[#8d6683] pageOrganise shadow-md">
+
+            </div>
+            <div class="w-full h-full absolute flex flex-col">
+                <div class="w-full h-1/3 flex z-50">
+                    <div class="w-1/4 h-full flex items-center justify-center">
+                        <div class="nice-card w-3/4 h-full mt-32">
+                            <div class="relative w-full h-full rounded-full shadow-md">
+                                <div class="absolute w-full h-full">
+                                    <img src="../images/grish-battlestation.jpeg"
+                                        class="w-full h-full object-cover rounded-xl" alt="Professional Grishon" />
+                                </div>
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-b from-[#3B3038] to-[#8d6683] rounded-xl opacity-80">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 h-full">
+                        <div class="w-full h-full z-100 relative flex items-end pb-20">
+                            <div class="page-title fadeIn font-silk text-[#F9FFF2]">
+                                <div class="text-5xl">
+                                    Battle Station
+                                </div>
+                                <div class="mt-10 font-dmono font-semibold w-3/4 tracking-wider">
+                                    My current work setup
+                                </div>
+                            </div>
+                            <div class="absolute right-0 top-0">
+                                <div class="m-20 cursor-pointer" onclick="history.back()">
+                                    <div class="close-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="w-10 h-10 z-10">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-2/3 appear flex justify-center overflow-y-scroll z-0">
+                    <div class="w-1/2 flex flex-col items-center gap-y-5 my-5">
+                        <div class="w-3/4">
+                            <div class="font-dmono font-extrabold text-2xl uppercase">
+                                My setup comprises of the following:
+                            </div>
+                            <div>
+                                <li>2021 14" Macbook M1 Pro</li>
+                                <li>27" HP M27f Display</li>
+                                <li>1st Gen Airpods Pro</li>
+                                <li>Noise Cancelling Earbuds</li>
+                                <li>Notebook</li>
+                                <li>Pen</li>
+                            </div>
+                        </div>
+
+                        <div class="w-3/4">
+                            <img src="../images/station-two.png" class="w-full rounded-md" />
+                        </div>
+                        <div class="w-3/4 ">
+                            <img src="../images/station-one.png" class="w-full rounded-md" />
+                        </div>
+                        <div class="w-full py-10">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

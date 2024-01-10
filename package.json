@@ -1,0 +1,27 @@
+{
+  "name": "grishon",
+  "version": "1.0",
+  "description": "Grishon's porfolio",
+  "source": "./src/pages/index.html",
+  "author": "Grishon Ng'ang'a",
+  "scripts": {
+    "watch": "&& parcel watch",
+    "build": "node ./src/scripts/blogsParser.js && parcel build"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "buffer": "^5.5.0||^6.0.0",
+    "parcel": "^2.10.3",
+    "tailwindcss": "^3.3.6"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@dogstudio/highway": "^2.2.1",
+    "@parcel/plugin": "^2.11.0",
+    "babel-loader": "^9.1.3",
+    "gray-matter": "^4.0.3",
+    "showdown": "^2.1.0"
+  }
+}
