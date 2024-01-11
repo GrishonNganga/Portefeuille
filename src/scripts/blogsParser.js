@@ -44,6 +44,9 @@ const generateBlogHtmlPage = async (htmlContent, fileName) => {
 
     const html = converter.makeHtml(htmlContent)
     console.log("HTML", html)
+    const path = await import("path").then(m => m.default) // won't be bundled
+    path.resolve("content")
+    console.log("PATH", path)
     fs.writeFile(htmlFilesDirectory + fileName + ".html", html, err => {
         if (err) {
             console.error(err);
