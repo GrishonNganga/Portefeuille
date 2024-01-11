@@ -44,9 +44,12 @@ const generateBlogHtmlPage = async (htmlContent, fileName) => {
     const html = converter.makeHtml(htmlContent)
     console.log("HTML", html)
     const path = await import("path").then(m => m.default) // won't be bundled
-    const distDirectory = path.resolve("/dist")
-    console.log("Dist Dir", distDirectory)
-    fs.writeFile(distDirectory + fileName + ".html", html, err => {
+    const distDirectory = path.resolve("dist")
+    if (!fs.existsSync(distDirectory)) {
+        fs.mkdirSync(distDirectory, { recursive: true });
+        console.log("Folder created", distDirectory)
+    }
+    fs.writeFile(distDirectory + "/" + fileName + ".html", html, err => {
         if (err) {
             console.error(err);
         }
