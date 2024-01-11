@@ -2,7 +2,6 @@ const fs = require('node:fs');
 const showdown = require('showdown');
 const matter = require('gray-matter');
 const blogsDirectory = __dirname.replace("scripts", "") + "pages/blogs/"
-const htmlFilesDirectory = __dirname.replace("src/scripts", "") + "dist/"
 
 const getAllBlogs = () => {
     try {
@@ -45,10 +44,8 @@ const generateBlogHtmlPage = async (htmlContent, fileName) => {
     const html = converter.makeHtml(htmlContent)
     console.log("HTML", html)
     const path = await import("path").then(m => m.default) // won't be bundled
-    const dirrr = path.resolve("dist")
-    console.log("DIRRR", dirrr)
-    console.log("PATH", path)
-    fs.writeFile(htmlFilesDirectory + fileName + ".html", html, err => {
+    const distDirectory = path.resolve("dist")
+    fs.writeFile(distDirectory + fileName + ".html", html, err => {
         if (err) {
             console.error(err);
         }
