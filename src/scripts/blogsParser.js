@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const showdown = require('showdown');
 const matter = require('gray-matter');
+const { parseMarkup } = require('./markup');
 const blogsDirectory = __dirname.replace("scripts", "") + "pages/blogs/"
 
 const getAllBlogs = () => {
@@ -29,7 +30,7 @@ const parseBlogs = () => {
         const content = readBlog(blog)
         const parsedMarkdown = matter(content)
         parsedBlogs.push({ ...parsedMarkdown, id: blog })
-        generateBlogHtmlPage(parsedMarkdown.content, parsedMarkdown.data.slug)
+        generateBlogHtmlPage(parsedMarkdown.content, parsedMarkdown.data)
     })
     return parsedBlogs
 }
@@ -38,18 +39,17 @@ const loadBlogs = () => {
     fs.writeFileSync(blogsDirectory + "blogs.js", "export const blogs = " + JSON.stringify(parsedBlogs, 'utf-8'))
 }
 
-const generateBlogHtmlPage = async (htmlContent, fileName) => {
+const generateBlogHtmlPage = async (htmlContent, data) => {
     const converter = new showdown.Converter()
-
     const html = converter.makeHtml(htmlContent)
-    console.log("HTML", html)
-    const path = await import("path").then(m => m.default) // won't be bundled
+
+    const htmlWithMarkup = parseMarkup(html, data)
+    const path = await import("path").then(m => m.default)
     const distDirectory = path.resolve("dist")
     if (!fs.existsSync(distDirectory)) {
         fs.mkdirSync(distDirectory, { recursive: true });
-        console.log("Folder created", distDirectory)
     }
-    fs.writeFile(distDirectory + "/" + fileName + ".html", html, err => {
+    fs.writeFile(distDirectory + "/" + data.slug + ".html", htmlWithMarkup, err => {
         if (err) {
             console.error(err);
         }
@@ -57,3 +57,5 @@ const generateBlogHtmlPage = async (htmlContent, fileName) => {
 }
 
 loadBlogs()
+
+
