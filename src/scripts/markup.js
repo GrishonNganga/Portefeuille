@@ -18,7 +18,7 @@ const parseMarkup = (htmlContent, data) => {
         <title>${data.title}</title>
     
         <style>
-            body {
+            page {
                 font-family: 'Arial', sans-serif;
                 line-height: 1.6;
                 margin: 0;
@@ -94,7 +94,8 @@ const parseMarkup = (htmlContent, data) => {
     </head>
     
     <body>
-        <div class="">
+        <section data-router-wrapper class="">
+            <div class="page" data-router-view="blog-page">
             <header>
                 <img src=${data?.thumbnail} alt="Banner image"
                     width="1920" height="300">
@@ -111,7 +112,8 @@ const parseMarkup = (htmlContent, data) => {
                     </div>
                 </article>
             </main>
-        </div>
+            </div>
+        </section>
     </body>
     
     </html>
