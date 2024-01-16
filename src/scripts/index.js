@@ -11,6 +11,5 @@ export const highway = new Highway.Core({
   },
   renderers: {
     "blogs-page": BlogsRenderer,
-    "blog-page": BlogRenderer
-  }
+    "blog-page": BlogRenderer  }
 });
