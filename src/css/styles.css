@@ -315,7 +315,8 @@
 
 }
 
-.quote {
+.quote,
+.quote-mobile {
     position: relative;
     display: flex;
     align-items: end;
@@ -330,9 +331,20 @@
     font-family: dmono;
 }
 
-.aspect-rectangle{
+.quote-mobile::before {
+    content: open-quote;
+    position: absolute;
+    color: #748069;
+    left: -10px;
+    top: -20px;
+    font-size: 60px;
+    font-family: dmono;
+}
+
+.aspect-rectangle {
     aspect-ratio: 9/16;
 }
+
 @keyframes pageOrganise {
     to {
         height: var(--page-organise-height);

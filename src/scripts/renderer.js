@@ -95,3 +95,20 @@ export class BlogRenderer extends Highway.Renderer {
         document.head.appendChild(styleElement);
     }
 }
+
+export class MainPageRenderer extends Highway.Renderer {
+    onEnter() {
+        const container = document.getElementById("imageToRotateContainer")
+        let rotation = 0; // Initial rotation
+
+        container.addEventListener('scroll', () => {
+            // Calculate the rotation based on the scroll position
+            rotation = container.scrollLeft; 
+            console.log("LEFT", rotation, "Right", container.scrollRight)
+            // Apply the rotation to the dial container
+            
+        });
+
+    }
+}
+
