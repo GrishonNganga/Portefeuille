@@ -90,6 +90,40 @@ const parseMarkup = (htmlContent, data) => {
                 border-radius: 5px;
                 text-decoration: none;
             }
+            pre {
+                counter-reset: line-numbering;
+                font-family: Menlo, Monaco, monospace;
+                background-color: #333;
+                padding: 5px;
+                padding-left: 15px;
+                color: #CCC;
+                border-radius: 3px;
+                word-break: keep-all;
+                white-space: pre-wrap;
+              }
+          
+              code:before {
+                content: counter(line-numbering);
+                counter-increment: line-numbering;
+                padding-right: 1em;
+                width: 1.5em;
+                text-align: right;
+                opacity: 0.5;
+              }
+          
+              /* .select-inside-this :not(.not-inside-this) .select-this */
+              code:not(:is(pre code)) {
+                color: crimson;
+                background-color: #f1f1f1;
+                padding: 2px;
+                font-size: 105%;
+              }
+          
+              code:not(:is(pre code))::before {
+                content: "";
+                counter-increment: line-numbering;
+                padding-right: 0px;
+              }
         </style>
     </head>
     
