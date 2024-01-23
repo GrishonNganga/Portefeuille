@@ -40,7 +40,7 @@ const loadBlogs = () => {
 }
 
 const generateBlogHtmlPage = async (htmlContent, data) => {
-    const converter = new showdown.Converter()
+    const converter = new showdown.Converter({ghCodeBlocks: true})
     const html = converter.makeHtml(htmlContent)
 
     const htmlWithMarkup = parseMarkup(html, data)
