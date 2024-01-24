@@ -1,18 +1,18 @@
 :root {
-    --fifty_percent: 50%;
-    --negative_fifty_percent: -50%;
-    --twelve_deg: 12deg;
-    --negative_twelve_deg: -12deg;
-    --twenty_deg: 20deg;
-    --negative_twenty_deg: -20deg;
-    --fifteen_deg: 15deg;
-    --negative_fifteen_deg: -15deg;
-    --page-organise-height: 40%;
+  --fifty_percent: 50%;
+  --negative_fifty_percent: -50%;
+  --twelve_deg: 12deg;
+  --negative_twelve_deg: -12deg;
+  --twenty_deg: 20deg;
+  --negative_twenty_deg: -20deg;
+  --fifteen_deg: 15deg;
+  --negative_fifteen_deg: -15deg;
+  --page-organise-height: 40%;
 }
 
 .card-1 {
-    transform: translateX(var(--negative_fifty_percent));
-    transition: 0.2s;
+  transform: translateX(var(--negative_fifty_percent));
+  transition: 0.2s;
 }
 
 
@@ -21,361 +21,361 @@
 .card-3:hover,
 .card-4:hover,
 .card-5:hover {
-    cursor: pointer;
-    box-shadow: 0 0 3px green;
-    translate: 0px -10px;
-    transition: 500ms;
+  cursor: pointer;
+  box-shadow: 0 0 3px green;
+  translate: 0px -10px;
+  transition: 500ms;
 }
 
 .card-2 {
-    transform: translateX(var(--negative_fifty_percent)) rotate(var(--twelve_deg));
-    transform-origin: bottom left;
-    transition: 0.2s;
+  transform: translateX(var(--negative_fifty_percent)) rotate(var(--twelve_deg));
+  transform-origin: bottom left;
+  transition: 0.2s;
 }
 
 .card-3 {
-    transform: translateX(var(--negative_fifty_percent)) rotate(var(--negative_twelve_deg));
-    transform-origin: bottom right;
-    transition: 0.2s;
+  transform: translateX(var(--negative_fifty_percent)) rotate(var(--negative_twelve_deg));
+  transform-origin: bottom right;
+  transition: 0.2s;
 }
 
 .card-4 {
-    transform: translateX(var(--negative_fifty_percent)) rotate(var(--twenty_deg));
-    transform-origin: bottom left;
-    transition: 0.2s;
+  transform: translateX(var(--negative_fifty_percent)) rotate(var(--twenty_deg));
+  transform-origin: bottom left;
+  transition: 0.2s;
 }
 
 .card-5 {
-    transform: translateX(var(--negative_fifty_percent)) rotate(var(--negative_twenty_deg));
-    transform-origin: bottom right;
-    transition: 0.2s;
+  transform: translateX(var(--negative_fifty_percent)) rotate(var(--negative_twenty_deg));
+  transform-origin: bottom right;
+  transition: 0.2s;
 }
 
 .appearFromBottomSlow {
-    animation: appearFromBottom 1.5s ease-out;
+  animation: appearFromBottom 1.5s ease-out;
 }
 
 .appearFromBottom {
-    animation: appearFromBottom 1s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: appearFromBottom 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .spreadCard1 {
-    animation: spreadCard1 500ms ease-in-out 1.8s 1 normal forwards;
+  animation: spreadCard1 500ms ease-in-out 1.8s 1 normal forwards;
 }
 
 .spreadCard2 {
-    animation: spreadCard2 500ms ease-in-out 1.8s 1 normal forwards;
+  animation: spreadCard2 500ms ease-in-out 1.8s 1 normal forwards;
 }
 
 .spreadCard3 {
-    animation: spreadCard3 500ms ease-in-out 1.8s 1 normal forwards;
+  animation: spreadCard3 500ms ease-in-out 1.8s 1 normal forwards;
 }
 
 .spreadCard4 {
-    animation: spreadCard4 500ms ease-in-out 1.8s 1 normal forwards;
+  animation: spreadCard4 500ms ease-in-out 1.8s 1 normal forwards;
 }
 
 .spreadCard5 {
-    animation: spreadCard5 500ms ease-in-out 1.8s 1 normal forwards;
+  animation: spreadCard5 500ms ease-in-out 1.8s 1 normal forwards;
 }
 
 .char {
-    transition: transform 1s cubic-bezier(.75, 0, .25, 1);
-    transition-duration: calc(0.2s + (0.03s * var(--distance-percent)));
+  transition: transform 1s cubic-bezier(.75, 0, .25, 1);
+  transition-duration: calc(0.2s + (0.03s * var(--distance-percent)));
 }
 
 .font-silk {
-    font-family: 'Silkscreen', sans-serif;
+  font-family: 'Silkscreen', sans-serif;
 }
 
 .font-dmono {
-    font-family: 'DM Mono', monospace;
+  font-family: 'DM Mono', monospace;
 
 }
 
 .flipCard {
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
 .flipCard-back {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flipCard-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flipCard:focus .flipCard-inner {
-    animation: changeScreen 1s ease-in forwards;
+  animation: changeScreen 1s ease-in forwards;
 }
 
 .flipCard-inner,
 .flipCard-back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .flipCard-1:focus {
-    animation: changeScreen1 500ms ease-in 1s forwards;
+  animation: changeScreen1 500ms ease-in 1s forwards;
 }
 
 .flipCard-2:focus {
-    transform: translateY(5%) rotate(var(--fifteen_deg)) translateX(calc(var(--negative_fifty_percent) + 70%));
-    animation: changeScreen2 500ms ease-in 1s forwards;
+  transform: translateY(5%) rotate(var(--fifteen_deg)) translateX(calc(var(--negative_fifty_percent) + 70%));
+  animation: changeScreen2 500ms ease-in 1s forwards;
 }
 
 .flipCard-3:focus {
-    transform: translateX(calc(var(--negative_fifty_percent) - 70%)) translateY(5%) rotate(var(--negative_fifteen_deg));
-    animation: changeScreen3 500ms ease-in 1s forwards;
+  transform: translateX(calc(var(--negative_fifty_percent) - 70%)) translateY(5%) rotate(var(--negative_fifteen_deg));
+  animation: changeScreen3 500ms ease-in 1s forwards;
 }
 
 .flipCard-4:focus {
-    transform: translateX(calc(var(--negative_fifty_percent) + 150%)) translateY(40%) rotate(var(--fifteen_deg));
-    animation: changeScreen3 500ms ease-in 1s forwards;
+  transform: translateX(calc(var(--negative_fifty_percent) + 150%)) translateY(40%) rotate(var(--fifteen_deg));
+  animation: changeScreen3 500ms ease-in 1s forwards;
 }
 
 .flipCard-5:focus {
-    transform: translateX(calc(var(--negative_fifty_percent) - 150%)) translateY(40%) rotate(var(--negative_fifteen_deg));
-    animation: changeScreen3 500ms ease-in 1s forwards;
+  transform: translateX(calc(var(--negative_fifty_percent) - 150%)) translateY(40%) rotate(var(--negative_fifteen_deg));
+  animation: changeScreen3 500ms ease-in 1s forwards;
 }
 
 @keyframes appearFromBottom {
 
-    0%,
-    30% {
-        transform: translateY(100vh) rotate(45deg);
-        opacity: 0;
-    }
+  0%,
+  30% {
+      transform: translateY(100vh) rotate(45deg);
+      opacity: 0;
+  }
 
-    50% {
-        transform: translateY(110vh);
-    }
+  50% {
+      transform: translateY(110vh);
+  }
 
-    100% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
+  100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+  }
 }
 
 @keyframes spreadCard1 {
-    100% {
-        transform: translateX(var(--negative_fifty_percent)) translateY(3%);
-    }
+  100% {
+      transform: translateX(var(--negative_fifty_percent)) translateY(3%);
+  }
 }
 
 @keyframes spreadCard2 {
-    100% {
-        transform: translateX(calc(var(--negative_fifty_percent) + 70%)) translateY(5%) rotate(var(--fifteen_deg));
-    }
+  100% {
+      transform: translateX(calc(var(--negative_fifty_percent) + 70%)) translateY(5%) rotate(var(--fifteen_deg));
+  }
 }
 
 @keyframes spreadCard3 {
-    100% {
-        transform: translateX(calc(var(--negative_fifty_percent) - 70%)) translateY(5%) rotate(var(--negative_fifteen_deg));
-    }
+  100% {
+      transform: translateX(calc(var(--negative_fifty_percent) - 70%)) translateY(5%) rotate(var(--negative_fifteen_deg));
+  }
 }
 
 @keyframes spreadCard4 {
-    100% {
-        transform: translateX(calc(var(--negative_fifty_percent) + 150%)) translateY(40%) rotate(var(--fifteen_deg));
-    }
+  100% {
+      transform: translateX(calc(var(--negative_fifty_percent) + 150%)) translateY(40%) rotate(var(--fifteen_deg));
+  }
 }
 
 @keyframes spreadCard5 {
-    100% {
-        transform: translateX(calc(var(--negative_fifty_percent) - 150%)) translateY(40%) rotate(var(--negative_fifteen_deg));
-    }
+  100% {
+      transform: translateX(calc(var(--negative_fifty_percent) - 150%)) translateY(40%) rotate(var(--negative_fifteen_deg));
+  }
 }
 
 @keyframes changeScreen {
-    to {
-        transform: rotateY(180deg);
-        box-shadow: none;
-    }
+  to {
+      transform: rotateY(180deg);
+      box-shadow: none;
+  }
 }
 
 @keyframes changeScreen1 {
-    50% {
-        width: 40%;
-        height: 40%;
-        /* transform: translateX(calc(var(--negative_fifty_percent) + 50%)); */
-    }
+  50% {
+      width: 40%;
+      height: 40%;
+      /* transform: translateX(calc(var(--negative_fifty_percent) + 50%)); */
+  }
 
-    100% {
-        position: fixed;
-        z-index: 9999;
-        top: 0rem;
-        width: 100%;
-        height: 100%;
-    }
+  100% {
+      position: fixed;
+      z-index: 9999;
+      top: 0rem;
+      width: 100%;
+      height: 100%;
+  }
 }
 
 @keyframes changeScreen2 {
 
-    to {
-        position: fixed;
-        z-index: 9999;
-        top: 0%;
-        left: 0%;
-        right: 0%;
-        width: 100%;
-        height: 100%;
-        transform: translateX(calc(var(--negative_fifty_percent) + 50%));
-    }
+  to {
+      position: fixed;
+      z-index: 9999;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform: translateX(calc(var(--negative_fifty_percent) + 50%));
+  }
 }
 
 
 @keyframes changeScreen3 {
-    to {
-        position: fixed;
-        z-index: 9999;
-        top: 0%;
-        left: 0%;
-        right: 0%;
-        width: 100%;
-        height: 100%;
-        transform: translateX(calc(var(--negative_fifty_percent) + 50%));
-    }
+  to {
+      position: fixed;
+      z-index: 9999;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform: translateX(calc(var(--negative_fifty_percent) + 50%));
+  }
 }
 
 @keyframes changeScreen4 {
-    to {
-        position: fixed;
-        z-index: 9999;
-        top: 0%;
-        left: 0%;
-        right: 0%;
-        width: 100%;
-        height: 100%;
-        transform: translateX(calc(var(--negative_fifty_percent) + 50%));
-    }
+  to {
+      position: fixed;
+      z-index: 9999;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform: translateX(calc(var(--negative_fifty_percent) + 50%));
+  }
 }
 
 @keyframes changeScreen5 {
-    to {
-        position: fixed;
-        z-index: 9999;
-        top: 0%;
-        left: 0%;
-        right: 0%;
-        width: 100%;
-        height: 100%;
-        transform: translateX(calc(var(--negative_fifty_percent) + 50%));
-    }
+  to {
+      position: fixed;
+      z-index: 9999;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform: translateX(calc(var(--negative_fifty_percent) + 50%));
+  }
 }
 
 /* Professional Page */
 
 .pageOrganise {
-    animation: pageOrganise 1.5s 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: pageOrganise 1.5s 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 .pageOrganiseSmaller {
-    animation: pageOrganiseSmaller 500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: pageOrganiseSmaller 500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 .close-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-btn::after {
-    position: absolute;
-    content: "";
-    width: 3rem;
-    height: 3rem;
-    border-radius: 9999px;
-    background-color: #F9FFF2;
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: #F9FFF2;
 }
 
 .close-btn:hover::after {
-    transform: scale(1.2);
-    transition: all .6s cubic-bezier(.16, 1, .3, 1);
+  transform: scale(1.2);
+  transition: all .6s cubic-bezier(.16, 1, .3, 1);
 }
 
 .nice-card {
-    opacity: 0;
-    animation: fadeIn 1500ms 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
+  opacity: 0;
+  animation: fadeIn 1500ms 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
 }
 
 .fadeIn {
-    opacity: 0;
-    animation: fadeIn 1500ms 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
+  opacity: 0;
+  animation: fadeIn 1500ms 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
 
 }
 
 .appear {
-    opacity: 0;
-    animation: appear 500ms 3s cubic-bezier(.16, 1, .3, 1) forwards;
-    z-index: 0;
+  opacity: 0;
+  animation: appear 500ms 3s cubic-bezier(.16, 1, .3, 1) forwards;
+  z-index: 0;
 
 }
 
 .quote,
 .quote-mobile {
-    position: relative;
-    display: flex;
-    align-items: end;
+  position: relative;
+  display: flex;
+  align-items: end;
 }
 
 .quote::before {
-    content: open-quote;
-    position: absolute;
-    color: #748069;
-    left: -10px;
-    font-size: 60px;
-    font-family: dmono;
+  content: open-quote;
+  position: absolute;
+  color: #748069;
+  left: -10px;
+  font-size: 60px;
+  font-family: dmono;
 }
 
 .quote-mobile::before {
-    content: open-quote;
-    position: absolute;
-    color: #748069;
-    left: -10px;
-    top: -20px;
-    font-size: 60px;
-    font-family: dmono;
+  content: open-quote;
+  position: absolute;
+  color: #748069;
+  left: -10px;
+  top: -20px;
+  font-size: 60px;
+  font-family: dmono;
 }
 
 .aspect-rectangle {
-    aspect-ratio: 9/16;
+  aspect-ratio: 9/16;
 }
 
 @keyframes pageOrganise {
-    to {
-        height: var(--page-organise-height);
-    }
+  to {
+      height: var(--page-organise-height);
+  }
 }
 
 @keyframes pageOrganiseSmaller {
-    to {
-        height: var(--page-organise-smaller-height);
-    }
+  to {
+      height: var(--page-organise-smaller-height);
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-5%);
-    }
+  0% {
+      opacity: 0;
+      transform: translateY(-5%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(5%);
-    }
+  100% {
+      opacity: 1;
+      transform: translateY(5%);
+  }
 }
 
 
 @keyframes appear {
-    0% {
-        opacity: 0;
-    }
+  0% {
+      opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+      opacity: 1;
+  }
 }

@@ -5,7 +5,7 @@
   "source": "./src/pages/index.html",
   "author": "Grishon Ng'ang'a",
   "scripts": {
-    "watch": "&& parcel watch",
+    "watch": "parcel watch",
     "build": "node ./src/scripts/blogsParser.js && parcel build"
   },
   "license": "MIT",
@@ -13,7 +13,7 @@
   "devDependencies": {
     "buffer": "^5.5.0||^6.0.0",
     "parcel": "^2.10.3",
-    "tailwindcss": "^3.3.6"
+    "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
