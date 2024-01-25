@@ -22,7 +22,6 @@
 .card-4:hover,
 .card-5:hover {
   cursor: pointer;
-  box-shadow: 0 0 3px green;
   translate: 0px -10px;
   transition: 500ms;
 }
