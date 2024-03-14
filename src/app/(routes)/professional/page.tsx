@@ -121,12 +121,12 @@ export default function Page() {
                     </div>
                     <div className="lg:w-3/4 mt-20 lg:mt-0">
                         <div className="w-full h-min border rounded-xl flex flex-col mb-20">
-                            <div className="w-full flex justify-between items-center border-b p-4">
-                                <div className="text-[#748069] font-bold">
+                            <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center border-b p-4">
+                                <div className="text-lg lg:text-base text-[#748069] font-bold">
                                     Jobs History
                                 </div>
                                 <div className="flex gap-x-3 divide-x-2 items-center">
-                                    <div className="w-20 h-full pl-3">
+                                    <div className="w-16 h-full lg:pl-3">
                                         <a href="https://www.github.com/GrishonNganga" target="_blank">
                                             <img src="/github.png" />
                                         </a>
@@ -134,7 +134,7 @@ export default function Page() {
                                     <a href="https://drive.google.com/file/d/13iHB4Rslq1sk2MRf1QcKfXGNOnwphpTI/view?usp=sharing"
                                         target="_blank">
                                         <div className="flex items-center pl-3">
-                                            <div className="text-[#748069] font-bold">
+                                            <div className="text-sm text-[#748069] font-bold">
                                                 Resume
                                             </div>
                                             <div>
