@@ -11,7 +11,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image";
-import { CheckCheckIcon } from "lucide-react";
 
 const images = ["/grish-battlestation.jpeg", "/station-one.jpg", "/station-two.jpg"]
 export default function Page() {

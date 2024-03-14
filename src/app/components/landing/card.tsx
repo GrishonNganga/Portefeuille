@@ -20,7 +20,6 @@ export interface CardProps {
 }
 
 export default function Card(props: CardProps) {
-    console.log(props.width)
     const isFace = true
     return (
         <Link href={props.card!.url}>

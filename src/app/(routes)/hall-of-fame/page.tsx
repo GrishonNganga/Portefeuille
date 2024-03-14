@@ -66,7 +66,7 @@ export default function Page() {
                         }
                     }}
                 >
-                    <div className="container lg:mt-0 mb-20 flex flex-col items-center">
+                    <div className="lg:container lg:mt-0 mb-20 flex flex-col items-center">
                         <div className="text-2xl font-bold tracking-wider">
                             Do what scares you! <span className="underline underline-offset-8">Live</span>
                         </div>
@@ -75,7 +75,7 @@ export default function Page() {
                                 {
                                     features.map((feature, idx) => {
                                         return (
-                                            <Link className={`lg:w-1/4 flex flex-col cursor-pointer`} href={feature.link} target="_blank">
+                                            <Link key={idx} className={`lg:w-1/4 flex flex-col cursor-pointer`} href={feature.link} target="_blank">
                                                 <motion.div
                                                     initial={{ scale: 1, y: 0 }}
                                                     whileHover={{ scale: 1.05, y: -20 }}

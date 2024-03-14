@@ -40,7 +40,7 @@ export default function Layout({ image, title, description, gradient, children }
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: .5 } }}
-                    className="absolute hidden lg:flex gap-x-5 z-100 top-1/4 2xl:top-1/3 left-20 flex">
+                    className="absolute hidden lg:flex gap-x-5 z-[100] top-1/4 2xl:top-1/3 left-20 flex">
                     <div className="relative w-64 shrink-0">
                         <Image src={image}
                             width={1000} height={1000}
