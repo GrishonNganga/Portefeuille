@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 
 import Layout from "@/app/components/ui/layout";

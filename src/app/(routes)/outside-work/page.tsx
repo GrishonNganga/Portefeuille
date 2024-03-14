@@ -7,10 +7,10 @@ export default function Page() {
     return (
         <div className="">
             <Layout
-                title="Blog"
-                description="Sometimes I write about whatever I'm into."
-                image="/grish-battlestation.jpeg"
-                gradient="bg-gradient-to-b from-[#A25D76] to-[#B57D92] opacity-80"
+                title="Outside Work"
+                description="Some of the things I'm interested in outside work"
+                image="/grish-outsidework.jpg"
+                gradient="bg-gradient-to-b from-[#807569] to-[#998E83] opacity-80"
 
             >
                 <motion.div
