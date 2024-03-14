@@ -40,13 +40,13 @@ export default function Page() {
                                 <div className="">
                                     1.
                                 </div>
-                                2021 14" Macbook M1 Pro
+                                2021 14&quot; Macbook M1 Pro
                             </div>
                             <div className="flex gap-x-2 border-t border-gray-100 py-3">
                                 <div className="">
                                     2.
                                 </div>
-                                27" HP M27f Display
+                                27&quot; HP M27f Display
                             </div>
                             <div className="flex gap-x-2 border-t border-gray-100 py-3">
                                 <div className="">

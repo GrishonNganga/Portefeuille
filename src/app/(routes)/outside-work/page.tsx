@@ -84,18 +84,18 @@ export default function Page() {
 
                                     <div>
                                         I love to travel to new places. I love chasing sunsets. I love being out in the wild,
-                                        experiencing new cultures. Generally, anything that get's me outdoors.
+                                        experiencing new cultures. Generally, anything that get&apos;s me outdoors.
                                     </div>
                                 </div>
                                 <div>
                                     <div>
-                                        I've had a chance to travel extensively within my country Kenya as well as visit
+                                        I&apos;ve had a chance to travel extensively within my country Kenya as well as visit
                                         Tanzania, Uganda, Tunisia and T&#252;rkiye.
                                     </div>
                                 </div>
                                 <div>
                                     <div>
-                                        2024 I'm taking it further, with a goal to visit 5 countries, within Africa, Europe and
+                                        2024 I&apos;m taking it further, with a goal to visit 5 countries, within Africa, Europe and
                                         North America.
                                     </div>
                                 </div>
@@ -104,12 +104,12 @@ export default function Page() {
                                         Hitchhiking
                                     </div>
                                     <div>
-                                        <span className="italic">"​A person who travels by asking for free rides in other people's
+                                        <span className="italic">&quot;​A person who travels by asking for free rides in other people&apos;s
                                             cars, by
                                             standing at
-                                            the side of the road and trying to get passing cars to stop."</span>
+                                            the side of the road and trying to get passing cars to stop.&quot;</span>
                                         <br /><br />
-                                        I've had the goal to go on a hitchhiking trip across Kenya, which I was fortunate to
+                                        I&apos;ve had the goal to go on a hitchhiking trip across Kenya, which I was fortunate to
                                         achieve between 1st Dec - 10th Dec 2023. Travelling across 7 counties and covering about
                                         700km.
                                     </div>
@@ -153,7 +153,7 @@ export default function Page() {
                                         garage. I am
                                         currently building and transforming my 2010 Audi A5 into the most powerful ad beautiful
                                         Audi A5 in
-                                        Africa. It's currently pushing around 350hp, on the road to 600hp. Take a look at the
+                                        Africa. It&apos;s currently pushing around 350hp, on the road to 600hp. Take a look at the
                                         progress.
                                     </div>
                                 </div>
