@@ -69,52 +69,52 @@ export default function Page() {
                         </div>
                         <div className="flex p-4 gap-x-1 flex-wrap gap-y-3">
                             <div className="w-12 h-12">
-                                <img src="/html.png" className="w-full object-scale-down" alt="HTML" />
+                                <Image width={50} height={50} src="/html.png" className="w-full object-scale-down" alt="HTML" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/css.png" className="w-full h-full object-scale-down" alt="CSS" />
+                                <Image width={50} height={50} src="/css.png" className="w-full h-full object-scale-down" alt="CSS" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/js.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/js.png" className="w-full h-full object-scale-down"
                                     alt="Javascript" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/react.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/react.png" className="w-full h-full object-scale-down"
                                     alt="React" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/nodejs.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/nodejs.png" className="w-full h-full object-scale-down"
                                     alt="NodeJS" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/python.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/python.png" className="w-full h-full object-scale-down"
                                     alt="Python" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/django.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/django.png" className="w-full h-full object-scale-down"
                                     alt="Django" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/flask.svg" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/flask.svg" className="w-full h-full object-scale-down"
                                     alt="Flask" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/mongodb.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/mongodb.png" className="w-full h-full object-scale-down"
                                     alt="Mongo DB" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/postgresql.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/postgresql.png" className="w-full h-full object-scale-down"
                                     alt="PostgreSQL" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/jest.png" className="w-full h-full object-scale-down" alt="Jest" />
+                                <Image width={50} height={50} src="/jest.png" className="w-full h-full object-scale-down" alt="Jest" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/jenkins.jpeg" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/jenkins.jpeg" className="w-full h-full object-scale-down"
                                     alt="Jest" />
                             </div>
                             <div className="w-12 h-12">
-                                <img src="/docker.png" className="w-full h-full object-scale-down"
+                                <Image width={50} height={50} src="/docker.png" className="w-full h-full object-scale-down"
                                     alt="Docker" />
                             </div>
                         </div>
@@ -128,7 +128,7 @@ export default function Page() {
                                 <div className="flex gap-x-3 divide-x-2 items-center">
                                     <div className="w-16 h-full lg:pl-3">
                                         <a href="https://www.github.com/GrishonNganga" target="_blank">
-                                            <img src="/github.png" />
+                                            <Image width={50} height={50} src="/github.png" alt="Github logo" />
                                         </a>
                                     </div>
                                     <a href="https://drive.google.com/file/d/13iHB4Rslq1sk2MRf1QcKfXGNOnwphpTI/view?usp=sharing"
@@ -150,7 +150,7 @@ export default function Page() {
                                     <div className="w-20 h-full pl-3">
                                         <a href="https://www.linkedin.com/in/grishon-ng-ang-a-8426b5149/"
                                             target="_blank">
-                                            <img src="/linkedin.png" />
+                                            <Image width={50} height={50} src="/linkedin.png" alt="LinkedIn logo" />
                                         </a>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@ export default function Page() {
                                 {
                                     jobs.map((job, idx) => {
                                         return (
-                                            <div className="flex flex-col lg:flex-row lg:gap-x-2 w-full py-3">
+                                            <div key={idx} className="flex flex-col lg:flex-row lg:gap-x-2 w-full py-3">
                                                 <div className="h-full">
                                                     <div className="w-1/4 lg:w-40 flex h-full">
                                                         <Image src={job.image} width={200} height={200} alt={job.companyName} className="w-full h-full object-contain aspect-square" />

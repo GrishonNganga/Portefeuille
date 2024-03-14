@@ -53,9 +53,9 @@ export default function Card(props: CardProps) {
                     src={props.card?.src}
                 />
                 {
-                    props.card?.gradients.map(gradient => {
+                    props.card?.gradients.map((gradient, idx) => {
                         return (
-                            <div
+                            <div key={idx}
                                 className={`absolute top-0 w-full h-full bg-gradient-to-b ${gradient} rounded-xl z-20 opacity-80 flipCard-front`}>
                             </div>
                         )
