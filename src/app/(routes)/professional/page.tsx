@@ -19,7 +19,19 @@ const jobs = [
         headCount: "10-20",
         duration: "Sept 2022 - Dec 2023",
         period: "1 yr 6 mon",
-        image: "/chromelot.png"
+        image: "/chromelot.png",
+        moreInfo: `
+        Part of the team responsible for rebuilding the entire company's Infrastructure from the ground up. (React, Typescript, NodeJS, PostgreSQL) <br><br>
+        
+        <b>Responsibilities:</b> <br>
+        - Developed user-facing features using <b>ReactJS</b>. <br>
+        - Architected server-side applications using <b>NodeJS</b> & <b>Express</b>. <br>
+        - Built APIs using RESTful web services and <b>Microservices architecture</b>. <br>
+        - Used <b>Docker</b> to containerize our microservices. <br>
+        - Implement CI/CD pipelines for entire architecture using <b>Github Actions</b>
+        - Used Github actions and to build and deploy applications in a scalable and reliable manner. <br>
+        - Wrote efficient, well-documented, and scalable code that meets coding standards and best practices. <br>
+        `
     },
     {
         companyName: "Adanian Labs",
@@ -28,8 +40,16 @@ const jobs = [
         location: "Nairobi, Kenya",
         headCount: "50-100",
         duration: "Jan 2022 - March 2023",
-        period: "1 yr 6 mon",
-        image: "/adanian.png"
+        period: "1 yr 3 mon",
+        image: "/adanian.png",
+        moreInfo: `
+        Venture building studio that sets out to build unicorns from Africa. <br><br>
+        <b>Responsibilities:</b> <br>
+        - Responsible for overseeing the recruitment process of Frontend Engineers at the company. <br>
+        - Involved in architectural design phase of different company projects. <br>
+        - Implemented automated testing and deployment processes, including <b>Cypress</b>, and <b>Github Actions</b>. <br>
+        - Mentored junior developers, fostering a culture of learning and innovation within different squads. <br>
+        `
     },
     {
         companyName: "Bloow Global",
@@ -39,7 +59,46 @@ const jobs = [
         headCount: "1-10",
         duration: "Sept 2021 - Jan 2022",
         period: "5 mon",
-        image: "/bloow.svg"
+        image: "/bloow.svg",
+        moreInfo: `
+        Music Streaming platform for Africa. I helped ship and grow the initial MVP to over <b>80,000 users</b>. <br> <br>
+
+        <b>Responsibilities:</b> <br>
+        - Involved in the development of the initial MVP using ReactJS. <br>
+        - Collaborated with backend team to integrate REST APIs. <br>
+        - Worked effectively with design teams to ensure software solutions elevated client-side experience.
+        `
+    },
+    {
+        companyName: "Fiverr",
+        role: "Freelance Full Stack Engineer",
+        website: "fiverr.com",
+        location: "Nairobi, Kenya",
+        headCount: "~",
+        duration: "Jan 2021 - Dec 2022",
+        period: "2 yrs",
+        image: "/fiverr.png",
+        moreInfo: `
+        Worked with different companies in different industries, including, Logistics, FinTech and PropTech as Full Stack Engineer.
+        `
+    },
+    {
+        companyName: "Rently LLC",
+        role: "Co Founder",
+        website: "rently.ke",
+        location: "Nairobi, Kenya",
+        headCount: "1-10",
+        duration: "Jan 2020 - March 2021",
+        period: "1 yr 3 mon",
+        image: "/rently.jpeg",
+        moreInfo: `
+        Rental property management Software. <br> <br>
+
+        <b>Responsibilities:</b> <br>
+        - Built the entire web based application. <br>
+        - Did outbound sales (Signed up 7 paying clients) <br>
+        - Conducted customer research to determine new features to build <br>
+        `
     },
 
 ]
@@ -131,7 +190,7 @@ export default function Page() {
                                             <Image width={50} height={50} src="/github.png" alt="Github logo" />
                                         </a>
                                     </div>
-                                    <a href="https://drive.google.com/file/d/13iHB4Rslq1sk2MRf1QcKfXGNOnwphpTI/view?usp=sharing"
+                                    <a href="https://drive.google.com/file/d/1nvtKMB8MnRrs8GIClcQ7xWUByS3cfPpN/view?usp=sharing"
                                         target="_blank">
                                         <div className="flex items-center pl-3">
                                             <div className="text-sm text-[#748069] font-bold">
@@ -224,17 +283,7 @@ export default function Page() {
                                                             </div>
                                                         </AccordionTrigger>
                                                         <AccordionContent className="border-t mt-2 pt-2">
-                                                            Responsible for designing and developing complex software systems using the NodeJS and React. Working collaboratively with cross-functional teams to build high-quality, scalable, and maintainable software solutions.
-
-                                                            Responsibilities:
-                                                            - Collaborating with cross-functional teams to identify business requirements and develop software solutions that meet those requirements.
-                                                            - Developing user-facing features using ReactJS.
-                                                            - Developing server-side applications using NodeJS.
-                                                            - Developing APIs using RESTful web services and Microservices architecture.
-                                                            - Using various database technologies such as PostgreSQL to develop, maintain and optimize databases.
-                                                            - Writing efficient, well-documented, and scalable code that meets coding standards and best practices.
-                                                            - Using DevOps tools and technologies to build and deploy applications in a scalable and reliable manner.
-                                                            - Collaborate with QA team to ensure that software applications are tested and meet quality standards.
+                                                            {job.moreInfo}
                                                         </AccordionContent>
                                                     </AccordionItem>
                                                 </div>
@@ -289,17 +338,7 @@ export default function Page() {
                                                                 </div>
                                                             </div>
                                                             <AccordionContent className="mt-2 pt-2">
-                                                                Responsible for designing and developing complex software systems using the NodeJS and React. Working collaboratively with cross-functional teams to build high-quality, scalable, and maintainable software solutions.
-
-                                                                Responsibilities:
-                                                                - Collaborating with cross-functional teams to identify business requirements and develop software solutions that meet those requirements.
-                                                                - Developing user-facing features using ReactJS.
-                                                                - Developing server-side applications using NodeJS.
-                                                                - Developing APIs using RESTful web services and Microservices architecture.
-                                                                - Using various database technologies such as PostgreSQL to develop, maintain and optimize databases.
-                                                                - Writing efficient, well-documented, and scalable code that meets coding standards and best practices.
-                                                                - Using DevOps tools and technologies to build and deploy applications in a scalable and reliable manner.
-                                                                - Collaborate with QA team to ensure that software applications are tested and meet quality standards.
+                                                                <div dangerouslySetInnerHTML={{ __html: job!.moreInfo || "" }}></div>
                                                             </AccordionContent>
                                                         </div>
                                                         <AccordionTrigger className="shrink-0 h-full flex flex-none shrink-0 items-start gap-x-2 hover:no-underline -ml-40">

@@ -12,6 +12,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Grishon Ng'ang'a",
   description: "Grishon's HQ",
+  icons: "/man.ico"
 };
 
 export default function RootLayout({
