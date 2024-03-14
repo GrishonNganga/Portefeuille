@@ -146,6 +146,10 @@ export default function Page() {
                                     alt="NodeJS" />
                             </div>
                             <div className="w-12 h-12">
+                                <Image width={50} height={50} src="/next-js.svg" className="w-full h-full object-scale-down"
+                                    alt="Next JS" />
+                            </div>
+                            <div className="w-12 h-12">
                                 <Image width={50} height={50} src="/python.png" className="w-full h-full object-scale-down"
                                     alt="Python" />
                             </div>
