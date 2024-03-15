@@ -115,7 +115,7 @@ export default function Hero() {
                         >
                             <Card
                                 card={card}
-                                width={(handWidth / (cards.length * (handWidth / cards.length < 300 ? 0.4 : (handWidth / cards.length < 500 ? 0.75 : 1))))}
+                                // width={(handWidth / (cards.length))}
                             />
                         </motion.div>
                     ))}
