@@ -1,10 +1,11 @@
 'use client'
-import { motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Card from "@/app/components/landing/card";
 import { ICard } from "@/lib/types";
 import { DM_Mono, Silkscreen } from "next/font/google";
 import Intro from "./intro";
+import { Dices } from "lucide-react";
 
 const silk = Silkscreen({
     subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function Hero() {
 
     const variants: Variants = {
         show: ({ i, isSelected }: { i: number; isSelected: boolean }) => ({
+            opacity: 1,
             y:
                 (isSelected ? -Math.cos(angle(i)) : 0) +
                 handHeight * (1 - Math.cos(angle(i))),
@@ -88,16 +90,40 @@ export default function Hero() {
         }),
         hidden: {
             transition: { duration: 0.2 },
+            opacity: 0,
             y: '100vh',
             x: 0
         },
     };
 
+    const randomlyRearrangeCards = () => {
+        const shuffled = cards
+            .map(value => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value)
+        setCards(shuffled)
+    }
     return (
         <div ref={ref} className="h-dvh w-full md:p-8">
             <div className="w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#4c5544] to-[#748069] md:rounded-md">
                 <Intro />
-                <div className="relative lg:h-1/2 flex items-end justify-center">
+                <div className="relative lg:h-1/2 h-full flex items-end justify-center">
+                    <div className="lg:hidden absolute h-full">
+                        <div className="w-full h-1/4 flex items-end ">
+                            <motion.div
+                                className="p-2 bg-gray-100 rounded-full shadow-md" onClick={randomlyRearrangeCards}
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    opacity: 1
+                                }}
+                                whileTap={{
+                                    scale: 1.1
+                                }}
+                            >
+                                <Dices size={40} className="" />
+                            </motion.div>
+                        </div>
+                    </div>
                     {cards.map((card, i) => (
                         <motion.div
                             custom={{ i, isSelected: selected == card }}
@@ -115,7 +141,7 @@ export default function Hero() {
                         >
                             <Card
                                 card={card}
-                                // width={(handWidth / (cards.length))}
+                            // width={(handWidth / (cards.length))}
                             />
                         </motion.div>
                     ))}
