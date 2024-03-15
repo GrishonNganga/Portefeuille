@@ -110,7 +110,7 @@ export default function Hero() {
                             transition={{ type: "tween" }}
                             style={{
                                 transformOrigin: "center bottom",
-                                height: `${handHeight / (handWidth < 1000 ? 3 : (handWidth < 1200 ? 2.5 : 2))}px`
+                                height: `${handHeight / (handWidth < 1500 ? 3 : (handWidth < 1920 ? 2.5 : 2))}px`
                             }}
                         >
                             <Card
