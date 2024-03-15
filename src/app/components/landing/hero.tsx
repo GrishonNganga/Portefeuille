@@ -17,7 +17,7 @@ const dmono = DM_Mono({
 })
 export default function Hero() {
     const ref = useRef<HTMLDivElement | null>(null);
-    const cards: ICard[] = [
+    const pageCards: ICard[] = [
         {
             src: "/grish-outsidework.jpg",
             gradients: ["bg-gradient-to-b from-[#807569] to-[#998E83] opacity-80"],
@@ -51,13 +51,13 @@ export default function Hero() {
     ]
     const [handWidth, setHandWidth] = useState(0);
     const [handHeight, setHandHeight] = useState(0)
-
+    const [cards, setCards] = useState<ICard[]>(pageCards)
     const hasRef = ref.current !== undefined;
 
     useEffect(() => {
         const onResize = () => {
             setHandWidth(ref.current!.clientWidth)
-            setHandHeight(ref.current!.clientWidth)
+            setHandHeight(ref.current!.clientHeight)
         };
         onResize();
         window.addEventListener("resize", onResize);
@@ -97,7 +97,7 @@ export default function Hero() {
         <div ref={ref} className="h-dvh w-full md:p-8">
             <div className="w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#4c5544] to-[#748069] md:rounded-md">
                 <Intro />
-                <div className="relative h-1/2 flex items-end justify-center">
+                <div className="relative lg:h-1/2 flex items-end justify-center">
                     {cards.map((card, i) => (
                         <motion.div
                             custom={{ i, isSelected: selected == card }}
@@ -110,6 +110,7 @@ export default function Hero() {
                             transition={{ type: "tween" }}
                             style={{
                                 transformOrigin: "center bottom",
+                                height: `${handHeight / (handWidth < 1000 ? 3 : (handWidth < 1200 ? 2.5 : 2))}px`
                             }}
                         >
                             <Card

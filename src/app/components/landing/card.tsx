@@ -24,7 +24,7 @@ export default function Card(props: CardProps) {
     return (
         <Link href={props.card!.url}>
             <motion.div
-                className="relative bottom-0 aspect-square cursor-pointer"
+                className="relative bottom-0 h-full cursor-pointer"
                 style={{ zIndex: props.z ?? "unset", width: props.width }}
                 initial={{ y: 0 }}
                 whileHover={{

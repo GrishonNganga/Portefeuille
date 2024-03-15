@@ -14,15 +14,15 @@ const dmono = DM_Mono({
 export default function Intro() {
     return (
         <motion.div
-            className="w-full grow shrink-0 flex flex-col justify-end lg:justify-center"
+            className="w-full h-1/2 shrink-0 flex flex-col justify-end lg:justify-center"
             initial={{ y: '-100vh' }}
             animate={{ y: 0 }}
         >
-            <div data-splitting className={`text-4xl text-center lg:text-5xl text-[#F9FFF2] font-extrabold tracking-wider ${silk.className}`}>
+            <div data-splitting className={`lg:text-4xl text-center text-xl md:text-5xl text-[#F9FFF2] font-extrabold tracking-wider ${silk.className}`}>
                 Grishon Ng&apos;ang&apos;a
             </div>
             <div
-                className={`flex flex-col mt-5 items-center text-[#F9FFF2] text-lg tracking-wider font-dmono appearFromTop ${dmono.className}`}>
+                className={`flex flex-col mt-5 items-center text-[#F9FFF2] text-sm lg:text-lg tracking-wider font-dmono appearFromTop ${dmono.className}`}>
                 <div>
                     Full Stack Software Engineer
                 </div>
