@@ -24,13 +24,10 @@ const jobs = [
         Part of the team responsible for rebuilding the entire company's Infrastructure from the ground up. (React, Typescript, NodeJS, PostgreSQL) <br><br>
         
         <b>Responsibilities:</b> <br>
-        - Developed user-facing features using <b>ReactJS</b>. <br>
-        - Architected server-side applications using <b>NodeJS</b> & <b>Express</b>. <br>
-        - Built APIs using RESTful web services and <b>Microservices architecture</b>. <br>
-        - Used <b>Docker</b> to containerize our microservices. <br>
-        - Implement CI/CD pipelines for entire architecture using <b>Github Actions</b>
-        - Used Github actions and to build and deploy applications in a scalable and reliable manner. <br>
-        - Wrote efficient, well-documented, and scalable code that meets coding standards and best practices. <br>
+        - Led the migration of legacy low code app to modern MERN stack resulting in easier scaling from Texas to 5 other states. <br>
+        - Grew engineering team from solo dev to 5 engineers from different parts of the world.<br>
+        - Architected the backend into 3 microservices (monolith, jobs and sync) that scaled horizontally as we grew.<br>
+        - Streamlined dev and deployment processes with CI/CD pipelines, Docker and e2e testing.<br>
         `
     },
     {
@@ -45,10 +42,10 @@ const jobs = [
         moreInfo: `
         Venture building studio that sets out to build unicorns from Africa. <br><br>
         <b>Responsibilities:</b> <br>
-        - Responsible for overseeing the recruitment process of Frontend Engineers at the company. <br>
-        - Involved in architectural design phase of different company projects. <br>
-        - Implemented automated testing and deployment processes, including <b>Cypress</b>, and <b>Github Actions</b>. <br>
-        - Mentored junior developers, fostering a culture of learning and innovation within different squads. <br>
+        - Interviewed over 45 and hired more than 10 Frontend Engineers for startups within the lab.<br>
+        - Designed coding standards and implemented our design system that resulted in general code review turn around time from 2 days to 1 day.<br>
+        - Implemented Github Actions CI/CD pipelines that resulted in more deployment cycles from every sprint to every week.<br>
+        - Managed 3 junior engineers ensuring their quality task completion, skills development and career progression.<br>
         `
     },
     {
@@ -64,9 +61,9 @@ const jobs = [
         Music Streaming platform for Africa. I helped ship and grow the initial MVP to over <b>80,000 users</b>. <br> <br>
 
         <b>Responsibilities:</b> <br>
-        - Involved in the development of the initial MVP using ReactJS. <br>
-        - Collaborated with backend team to integrate REST APIs. <br>
-        - Worked effectively with design teams to ensure software solutions elevated client-side experience.
+        - Involved in the development and growth of the initial MVP using ReactJS. Up to  (80,000 users).<br>
+        - Improved web app performance by 15% by code splitting, caching and assets optimization. <br>
+        - Reduced app downtime by 50% during peak traffic spikes  from prior caching endeavour and implementing a CDN.<br>
         `
     },
     {
@@ -194,7 +191,7 @@ export default function Page() {
                                             <Image width={50} height={50} src="/github.png" alt="Github logo" />
                                         </a>
                                     </div>
-                                    <a href="https://drive.google.com/file/d/16FgUaGAWQbiCH7iNVstPxbCkJeIfQaYy/view?usp=sharing"
+                                    <a href="https://drive.google.com/file/d/1YnejEKvCVVOowsDra8zyVPKrgcSXFytU/view?usp=sharing"
                                         target="_blank">
                                         <div className="flex items-center pl-3">
                                             <div className="text-sm text-[#748069] font-bold">
