@@ -68,7 +68,7 @@ export default function Hero() {
     const [selected, setSelected] = useState(null);
 
     function angle(i: number) {
-        const factor = cards.length / 4;
+        const factor = cards.length / (handWidth < 768 ? 1 : (handWidth < 1500 ? 3 : 4))
         let x = offsetFromCenter(cards, i) * 0.05;
         if (cards.length % 2 === 0) x += 0.025;
         return x * (Math.PI / factor);
