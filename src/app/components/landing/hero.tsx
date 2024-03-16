@@ -3,19 +3,11 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Card from "@/app/components/landing/card";
 import { ICard } from "@/lib/types";
-import { DM_Mono, Silkscreen } from "next/font/google";
 import Intro from "./intro";
 import { Dices } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Boxes } from "@/components/ui/background-boxes";
 
-const silk = Silkscreen({
-    subsets: ["latin"],
-    weight: "400"
-})
-
-const dmono = DM_Mono({
-    subsets: ["latin"],
-    weight: "300"
-})
 export default function Hero() {
     const ref = useRef<HTMLDivElement | null>(null);
     const pageCards: ICard[] = [
@@ -65,8 +57,6 @@ export default function Hero() {
         return () => window.removeEventListener("resize", onResize);
     }, [hasRef]);
 
-    const [selected, setSelected] = useState(null);
-
     function angle(i: number) {
         const factor = cards.length / (handWidth < 768 ? 1 : (handWidth < 1500 ? 3 : 4))
         let x = offsetFromCenter(cards, i) * 0.05;
@@ -105,7 +95,11 @@ export default function Hero() {
     }
     return (
         <div ref={ref} className="h-dvh w-full md:p-8">
-            <div className="w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#4c5544] to-[#748069] md:rounded-md">
+            <div className="w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#4c5544] to-[#748069] md:rounded-md relative">
+                <div className="absolute inset-0 w-full h-full bg-slate-900 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+                <div className="absolute top-0 w-full h-full">
+                    <Boxes />
+                </div>
                 <Intro />
                 <motion.div layoutId={Math.random().toString()}
                     className="relative lg:h-1/2 h-full flex items-end justify-center">

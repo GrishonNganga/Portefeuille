@@ -18,11 +18,11 @@ export default function Intro() {
             initial={{ y: '-100vh' }}
             animate={{ y: 0 }}
         >
-            <div data-splitting className={`lg:text-4xl text-center text-xl md:text-5xl text-[#F9FFF2] font-extrabold tracking-wider ${silk.className}`}>
+            <div data-splitting className={`lg:text-4xl text-center text-xl md:text-5xl text-[#F9FFF2] font-extrabold tracking-wider ${silk.className}  z-[100]`}>
                 Grishon Ng&apos;ang&apos;a
             </div>
             <div
-                className={`flex flex-col mt-5 items-center text-[#F9FFF2] text-sm lg:text-lg tracking-wider font-dmono appearFromTop ${dmono.className}`}>
+                className={`flex flex-col mt-5 items-center text-[#F9FFF2] text-sm lg:text-lg tracking-wider font-dmono appearFromTop ${dmono.className} z-[100]`}>
                 <div>
                     Full Stack Software Engineer
                 </div>
@@ -39,7 +39,7 @@ export default function Intro() {
                     Hitch-hiker
                 </div>
             </div>
-            <div className="flex justify-center gap-x-5 pt-5 items-center">
+            <div className="flex justify-center gap-x-5 pt-5 items-center  z-[100]">
                 <div className="w-10 h-10">
                     <a href="https://www.linkedin.com/in/grishon-ng-ang-a-8426b5149/" target="_blank">
                         <Image width={50} height={50} alt="Linked logo" src="/linkedin-logo.png" className="w-full h-full" />

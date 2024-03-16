@@ -78,7 +78,7 @@ export default function Layout({ image, title, description, gradient, children }
                     className="absolute hidden lg:flex gap-x-5 z-[100] top-1/4 2xl:top-1/3 left-20 flex">
                     <motion.div className="relative shrink-0"
                         variants={imageVariant}
-                        style={{transformOrigin: "center"}}
+                        style={{ transformOrigin: "center" }}
                     >
                         <Image src={image}
                             width={1000} height={1000}
@@ -107,9 +107,12 @@ export default function Layout({ image, title, description, gradient, children }
                         <div className={`text-3xl text-[#F9FFF2] ${silk.className}`}>
                             {title}
                         </div>
-                        <div className={`mt-5 font-dmono font-semibold tracking-wider text-sm text-[#F9FFF2] ${dmono.className}`}>
-                            {description}
-                        </div>
+                        {
+                            !shrinked &&
+                            <div className={`mt-10 font-dmono font-semibold w-3/4 tracking-wider text-[#F9FFF2] ${dmono.className}`}>
+                                {description}
+                            </div>
+                        }
                     </div>
                 </motion.div>
             </motion.div>
