@@ -1,9 +1,10 @@
 'use client'
 import { X } from "lucide-react"
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { DM_Mono, Silkscreen } from "next/font/google";
+import { useRef, useState } from "react";
 
 const silk = Silkscreen({
     subsets: ["latin"],
@@ -16,10 +17,44 @@ const dmono = DM_Mono({
 })
 
 export default function Layout({ image, title, description, gradient, children }: { image: string, title: string, description: string, children: React.ReactNode, gradient: string }) {
+    const divRef = useRef(null)
+    const [shrinked, setShrinked] = useState(false)
+    const { scrollYProgress } = useScroll({
+        container: divRef
+    });
+
+    const headerVariant = {
+        initial: {
+            height: '33%'
+        },
+        shrinked: {
+            height: '100px'
+        }
+    }
+
+    const imageVariant = {
+        initial: {
+            width: '16rem'
+        },
+        shrinked: {
+            width: '4rem'
+        }
+    }
+    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+        if (latest > 0.1) {
+            setShrinked(true)
+        } else {
+            setShrinked(false)
+        }
+    })
     return (
         <div className="w-full h-dvh flex flex-col">
             <motion.div
-                className="w-full h-1/3 relative shrink-0">
+                variants={headerVariant}
+                initial="initial"
+                animate={shrinked ? "shrinked" : "initial"}
+                className={`w-full relative shrink-0`}
+            >
                 <motion.div
                     className={`absolute top-0 w-full ${gradient}`}
                     initial={{ height: 0 }}
@@ -27,7 +62,7 @@ export default function Layout({ image, title, description, gradient, children }
                 >
 
                 </motion.div>
-                <div className="absolute right-0 p-5 lg:p-10">
+                <div className="absolute right-0 p-5 lg:p-8">
                     <Link href={"/"}>
                         <motion.div
                             initial={{ scale: 1 }}
@@ -41,21 +76,27 @@ export default function Layout({ image, title, description, gradient, children }
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: .5 } }}
                     className="absolute hidden lg:flex gap-x-5 z-[100] top-1/4 2xl:top-1/3 left-20 flex">
-                    <div className="relative w-64 shrink-0">
+                    <motion.div className="relative shrink-0"
+                        variants={imageVariant}
+                        style={{transformOrigin: "center"}}
+                    >
                         <Image src={image}
                             width={1000} height={1000}
                             className="aspect-square object-cover rounded-xl" alt="Professional Grishon" />
                         <div
                             className={`absolute top-0 w-full h-full ${gradient} rounded-xl opacity-80`}>
                         </div>
-                    </div>
+                    </motion.div>
                     <div>
                         <div className={`text-5xl text-[#F9FFF2] ${silk.className}`}>
                             {title}
                         </div>
-                        <div className={`mt-10 font-dmono font-semibold w-3/4 tracking-wider text-[#F9FFF2] ${dmono.className}`}>
-                            {description}
-                        </div>
+                        {
+                            !shrinked &&
+                            <div className={`mt-10 font-dmono font-semibold w-3/4 tracking-wider text-[#F9FFF2] ${dmono.className}`}>
+                                {description}
+                            </div>
+                        }
                     </div>
                 </motion.div>
                 <motion.div
@@ -72,7 +113,7 @@ export default function Layout({ image, title, description, gradient, children }
                     </div>
                 </motion.div>
             </motion.div>
-            <div className="w-full h-full overflow-scroll pt-20 container">
+            <div className="w-full h-full overflow-scroll pt-20 container" ref={divRef}>
                 {children}
             </div>
         </div>

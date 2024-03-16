@@ -75,13 +75,13 @@ export default function Hero() {
     }
 
     const variants: Variants = {
-        show: ({ i, isSelected }: { i: number; isSelected: boolean }) => ({
+        show: ({ i }: { i: number; }) => ({
             opacity: 1,
             y:
-                (isSelected ? -Math.cos(angle(i)) : 0) +
+                -Math.cos(angle(i)) +
                 handHeight * (1 - Math.cos(angle(i))),
             x:
-                (isSelected ? Math.sin(angle(i)) : 0) +
+                Math.sin(angle(i)) +
                 handWidth * Math.sin(angle(i)),
             rotate: `${angle(i)}rad`,
             transition: {
@@ -89,10 +89,10 @@ export default function Hero() {
             }
         }),
         hidden: {
-            transition: { duration: 0.2 },
-            opacity: 0,
-            y: '100vh',
-            x: 0
+            // transition: { duration: 0.2 },
+            // opacity: 0,
+            // y: '100vh',
+            // x: 0
         },
     };
 
@@ -107,7 +107,8 @@ export default function Hero() {
         <div ref={ref} className="h-dvh w-full md:p-8">
             <div className="w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#4c5544] to-[#748069] md:rounded-md">
                 <Intro />
-                <div className="relative lg:h-1/2 h-full flex items-end justify-center">
+                <motion.div layoutId={Math.random().toString()}
+                    className="relative lg:h-1/2 h-full flex items-end justify-center">
                     <div className="lg:hidden absolute h-full">
                         <div className="w-full h-1/4 flex items-end ">
                             <motion.div
@@ -124,28 +125,30 @@ export default function Hero() {
                             </motion.div>
                         </div>
                     </div>
-                    {cards.map((card, i) => (
-                        <motion.div
-                            custom={{ i, isSelected: selected == card }}
-                            initial="hidden"
-                            animate="show"
-                            exit="hidden"
-                            variants={variants}
-                            className="absolute"
-                            key={i}
-                            transition={{ type: "tween" }}
-                            style={{
-                                transformOrigin: "center bottom",
-                                height: `${handHeight / (handWidth < 1500 ? 3 : (handWidth < 1920 ? 2.5 : 2))}px`
-                            }}
-                        >
-                            <Card
-                                card={card}
-                            // width={(handWidth / (cards.length))}
-                            />
-                        </motion.div>
-                    ))}
-                </div>
+                    <AnimatePresence >
+                        {cards.map((card, i) => (
+                            <motion.div
+                                custom={{ i }}
+                                initial="hidden"
+                                animate="show"
+                                exit="hidden"
+                                variants={variants}
+                                className="absolute"
+                                key={i}
+                                transition={{ type: "tween" }}
+                                style={{
+                                    transformOrigin: "center bottom",
+                                    height: `${handHeight / (handWidth < 1500 ? 3 : (handWidth < 1920 ? 2.5 : 2))}px`
+                                }}
+                            >
+                                <Card
+                                    card={card}
+                                // width={(handWidth / (cards.length))}
+                                />
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </motion.div>
             </div>
         </div>
     );

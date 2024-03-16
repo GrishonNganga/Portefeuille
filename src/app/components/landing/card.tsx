@@ -24,20 +24,15 @@ export default function Card(props: CardProps) {
     return (
         <Link href={props.card!.url}>
             <motion.div
+                layoutId={Math.random().toString()}
                 className="relative bottom-0 h-full aspect-square cursor-pointer"
                 style={{ zIndex: props.z ?? "unset", width: props.width }}
                 initial={{ y: 0 }}
                 whileHover={{
-                    y: [-50, 0],
-                    transition: {
-                        duration: .5,
-                        repeat: Infinity,
-                        repeatType: "mirror"
-                    }
+                    y: -50, 
                 }}
             >
                 <motion.img
-                    layoutId={Math.random().toString()}
                     animate={{
                         filter: props.grayOut ? "contrast(0.55)" : "contrast(1)",
                         transition: {
