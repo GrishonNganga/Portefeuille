@@ -109,7 +109,7 @@ export default function Layout({ image, title, description, gradient, children }
                         </div>
                         {
                             !shrinked &&
-                            <div className={`mt-10 font-dmono font-semibold w-3/4 tracking-wider text-[#F9FFF2] ${dmono.className}`}>
+                            <div className={`mt-5 font-dmono font-semibold tracking-wider text-sm text-[#F9FFF2] ${dmono.className}`}>
                                 {description}
                             </div>
                         }

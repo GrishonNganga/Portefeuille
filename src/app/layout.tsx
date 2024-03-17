@@ -10,7 +10,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Grishon Ng'ang'a",
+  title: "Grishon Ng'ang'a - Full Stack Engineer",
   description: "Grishon's HQ",
   icons: "/man.ico"
 };

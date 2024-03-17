@@ -56,8 +56,8 @@ export default function Card(props: CardProps) {
                     })
                 }
                 <div
-                    className="absolute top-0 w-full h-full flex justify-center z-30 text-[#F9FFF2] font-silk text-xl lg:text-3xl py-5 flipCard-front">
-                    <div className={`${silk.className} text-[4vw] lg:text-[2vw]`}>
+                    className="absolute top-0 w-full h-full flex justify-center z-30 text-[#F9FFF2] font-silk text-xl xl:text-3xl py-5 flipCard-front">
+                    <div className={`${silk.className}`}>
                         {props.card?.title}
                     </div>
                 </div>
