@@ -2,7 +2,7 @@ import { ICard } from "@/lib/types";
 import clsx from "clsx";
 import { Silkscreen } from "next/font/google";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ export interface CardProps {
 export default function Card(props: CardProps) {
     const isFace = true
     return (
-        <Link href={props.card!.url}>
+        <Link prefetch={false} href={props.card!.url}>
             <motion.div
                 layoutId={Math.random().toString()}
                 className="relative bottom-0 h-full aspect-square cursor-pointer"
