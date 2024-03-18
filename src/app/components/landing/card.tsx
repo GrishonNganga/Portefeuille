@@ -4,6 +4,7 @@ import { Silkscreen } from "next/font/google";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const silk = Silkscreen({
     subsets: ["latin"],
@@ -29,23 +30,26 @@ export default function Card(props: CardProps) {
                 style={{ zIndex: props.z ?? "unset", width: props.width }}
                 initial={{ y: 0 }}
                 whileHover={{
-                    y: -50, 
+                    y: -50,
                 }}
             >
-                <motion.img
+                <motion.div
                     animate={{
                         filter: props.grayOut ? "contrast(0.55)" : "contrast(1)",
                         transition: {
                             duration: 1.5,
                         },
                     }}
-                    className={clsx(
-                        "select-none w-full h-full object-cover",
-                        !props.noShadow && "shadow-lg shadow-zinc-500/40 drop-shadow-xl",
-                        isFace && "rounded-lg border-white p-1",
-                    )}
-                    src={props.card?.src}
-                />
+                    className="w-full h-full"
+
+                >
+                    <Image width={300} height={300} src={props.card?.src as string} alt={` ${props.card?.title} Card`}
+                        className={clsx(
+                            "select-none w-full h-full object-cover",
+                            !props.noShadow && "shadow-lg shadow-zinc-500/40 drop-shadow-xl",
+                            isFace && "rounded-lg border-white p-1",
+                        )} />
+                </motion.div>
                 {
                     props.card?.gradients.map((gradient, idx) => {
                         return (

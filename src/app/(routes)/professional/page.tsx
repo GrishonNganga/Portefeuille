@@ -103,13 +103,13 @@ const jobs = [
 ]
 
 const projects = [
-    {
-        name: "Scout",
-        description: "Find companies that have recently raised funding",
-        logo: '/scout.svg',
-        url: '/scout',
-        tags: ["React", "NextJs", "TailwindCss", "MongoDB"]
-    },
+    // {
+    //     name: "Scout",
+    //     description: "Find companies that have recently raised funding",
+    //     logo: '/scout.svg',
+    //     url: '/scout',
+    //     tags: ["React", "NextJs", "TailwindCss", "MongoDB"]
+    // },
     {
         name: "Barter Africa",
         description: "Protects buyers and sellers from online scammers.",

@@ -5,20 +5,19 @@ import Card from "@/app/components/landing/card";
 import { ICard } from "@/lib/types";
 import Intro from "./intro";
 import { Dices } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Boxes } from "@/components/ui/background-boxes";
 
 export default function Hero() {
     const ref = useRef<HTMLDivElement | null>(null);
     const pageCards: ICard[] = [
         {
-            src: "/grish-outsidework.jpg",
+            src: "/grish-outsidework.webp",
             gradients: ["bg-gradient-to-b from-[#807569] to-[#998E83] opacity-80"],
             title: "Outside Work",
             url: "/outside-work"
         },
         {
-            src: "/grish-battlestation.jpeg",
+            src: "/grish-battlestation.webp",
             gradients: ["bg-gradient-to-b from-[#3B3038] to-[#8d6683] opacity-80"],
             title: "Battle Station",
             url: "/battle-station"
@@ -36,7 +35,7 @@ export default function Hero() {
             url: "/hall-of-fame"
         },
         {
-            src: "/grish-professional.jpg",
+            src: "/grish-professional.webp",
             gradients: ["bg-gradient-to-b from-[#748069] to-[#8E9983] opacity-80"],
             title: "Professional",
             url: "/professional"
