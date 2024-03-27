@@ -6,6 +6,7 @@ import { ICard } from "@/lib/types";
 import Intro from "./intro";
 import { Dices } from "lucide-react";
 import { Boxes } from "@/components/ui/background-boxes";
+import useElementDimensions from "@/lib/hooks/dimensions";
 
 export default function Hero() {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -41,24 +42,12 @@ export default function Hero() {
             url: "/professional"
         },
     ]
-    const [handWidth, setHandWidth] = useState(0);
-    const [handHeight, setHandHeight] = useState(0)
+const {width, height} = useElementDimensions(ref)
     const [cards, setCards] = useState<ICard[]>(pageCards)
-    const hasRef = ref.current !== undefined;
 
-    useEffect(() => {
-        const onResize = () => {
-            console.log("width", ref.current!.clientWidth, "height", ref.current!.clientHeight)
-            setHandWidth(ref.current!.clientWidth)
-            setHandHeight(ref.current!.clientHeight)
-        };
-        onResize();
-        window.addEventListener("resize", onResize);
-        return () => window.removeEventListener("resize", onResize);
-    }, [hasRef]);
 
     function angle(i: number) {
-        const factor = cards.length / (handWidth < 768 ? 1 : (handWidth < 1500 ? 3 : 4))
+        const factor = cards.length / (width < 768 ? 1 : (height < 1500 ? 3 : 4))
         let x = offsetFromCenter(cards, i) * 0.05;
         if (cards.length % 2 === 0) x += 0.025;
         return x * (Math.PI / factor);
@@ -69,10 +58,10 @@ export default function Hero() {
             opacity: 1,
             y:
                 -Math.cos(angle(i)) +
-                handHeight * (1 - Math.cos(angle(i))),
+                height * (1 - Math.cos(angle(i))),
             x:
                 Math.sin(angle(i)) +
-                handWidth * Math.sin(angle(i)),
+                width * Math.sin(angle(i)),
             rotate: `${angle(i)}rad`,
             transition: {
                 duration: .2
@@ -132,7 +121,7 @@ export default function Hero() {
                                 transition={{ type: "tween" }}
                                 style={{
                                     transformOrigin: "center bottom",
-                                    height: `${handHeight / (handWidth < 1500 ? 3 : (handWidth < 1920 ? 2.5 : 2))}px`
+                                    height: `${height / (width < 1500 ? 3 : (width < 1920 ? 2.5 : 2))}px`
                                 }}
                             >
                                 <Card

@@ -4,7 +4,8 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { DM_Mono, Silkscreen } from "next/font/google";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import useElementDimensions from "@/lib/hooks/dimensions";
 
 const silk = Silkscreen({
     subsets: ["latin"],
@@ -22,22 +23,25 @@ export default function Layout({ image, title, description, gradient, children }
     const { scrollYProgress } = useScroll({
         container: divRef
     });
-
+    const { width, height } = useElementDimensions(divRef)
+    const [imageWidth, setImageWidth] = useState("10rem")
+    const imageVariant = {
+        initial: {
+            width: imageWidth
+        },
+        animate: {
+            width: imageWidth
+        },
+        shrinked: {
+            width: '4rem'
+        }
+    }
     const headerVariant = {
         initial: {
             height: '33%'
         },
         shrinked: {
             height: '100px'
-        }
-    }
-
-    const imageVariant = {
-        initial: {
-            width: '16rem'
-        },
-        shrinked: {
-            width: '4rem'
         }
     }
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -47,6 +51,14 @@ export default function Layout({ image, title, description, gradient, children }
             setShrinked(false)
         }
     })
+
+    useEffect(() => {
+        const fullWidth = width
+        const w = fullWidth < 1000 ? '10rem' :
+            fullWidth < 1500 ? '12rem' :
+                fullWidth < 1900 ? '14rem' : '16rem'
+        setImageWidth(w)
+    }, [width])
     return (
         <div className="w-full h-dvh flex flex-col">
             <motion.div
@@ -78,6 +90,7 @@ export default function Layout({ image, title, description, gradient, children }
                     className="absolute hidden lg:flex gap-x-5 z-[100] top-1/4 2xl:top-1/3 left-20 flex">
                     <motion.div className="relative shrink-0"
                         variants={imageVariant}
+                        animate={shrinked ? "shrinked" : "animate"}
                         style={{ transformOrigin: "center" }}
                     >
                         <Image src={image}
@@ -88,12 +101,12 @@ export default function Layout({ image, title, description, gradient, children }
                         </div>
                     </motion.div>
                     <div>
-                        <div className={`text-5xl text-[#F9FFF2] ${silk.className}`}>
+                        <div className={`text-3xl 3xl:text-5xl text-[#F9FFF2] ${silk.className}`}>
                             {title}
                         </div>
                         {
                             !shrinked &&
-                            <div className={`mt-10 font-dmono font-semibold w-3/4 tracking-wider text-[#F9FFF2] ${dmono.className}`}>
+                            <div className={`mt-5 3xl:mt-10 font-dmono font-semibold 2xl:w-3/4 tracking-wider text-[#F9FFF2] ${dmono.className}`}>
                                 {description}
                             </div>
                         }
@@ -104,12 +117,12 @@ export default function Layout({ image, title, description, gradient, children }
                     animate={{ opacity: 1, transition: { delay: .5 } }}
                     className="absolute flex lg:hidden items-center gap-x-5 z-100 top-10 2xl:top-1/3 flex container">
                     <div>
-                        <div className={`text-3xl text-[#F9FFF2] ${silk.className}`}>
+                        <div className={`text-xl text-[#F9FFF2] ${silk.className}`}>
                             {title}
                         </div>
                         {
                             !shrinked &&
-                            <div className={`mt-5 font-dmono font-semibold tracking-wider text-sm text-[#F9FFF2] ${dmono.className}`}>
+                            <div className={`xl:mt-5 font-dmono font-semibold tracking-wider text-sm text-[#F9FFF2] ${dmono.className}`}>
                                 {description}
                             </div>
                         }

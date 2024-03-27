@@ -14,6 +14,24 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 const jobs = [
     {
+        companyName: "Kyakula",
+        role: "Frontend Developer",
+        website: "mautamu.com",
+        location: "Nairobi, Kenya",
+        headCount: "1-10",
+        duration: "Sept 2023 - Present",
+        period: "7 mon",
+        image: "/kyakula.jpeg  ",
+        moreInfo: `
+        Food Delivery app based in Kenya. (React, ReactNative Typescript, NodeJS, MongoDB) <br><br>
+        
+        <b>Responsibilities:</b> <br>
+        - Worked on various features like restaurant browsing, menu selection and order tracking on the flagship Food delivery app using ReactNative in a team of 8. <br>
+        - Hold a key role in building and maintaining card and Mobile money payments integration through Flutterwave.<br>
+        - Introduced and written over 250 tests on Kyakula mobile app using Jest.<br>
+        `
+    },
+    {
         companyName: "Chromelot Media LLC",
         role: "Full Stack Software Engineer",
         website: "chromelot.com",
@@ -48,6 +66,23 @@ const jobs = [
         - Designed coding standards and implemented our design system that resulted in general code review turn around time from 2 days to 1 day.<br>
         - Implemented Github Actions CI/CD pipelines that resulted in more deployment cycles from every sprint to every week.<br>
         - Managed 3 junior engineers ensuring their quality task completion, skills development and career progression.<br>
+        `
+    },
+    {
+        companyName: "Legal Space",
+        role: "Frontend Engineer",
+        website: "legalspace.app",
+        location: "Lusaka, Zambia",
+        headCount: "10-20",
+        duration: "Oct 2022 - March 2023",
+        period: "6 mon",
+        image: "/legalspace.svg",
+        moreInfo: `
+        Web based platform connecting clients to Legal Practitioners <br><br>
+        <b>Responsibilities:</b> <br>
+        - Built and maintained complex UI components ensuring browser compatibility and Accessibility requirements were met.<br>
+        - Integrated RESTful Apis with backend team and ensuring optimized performance. Less than 1 sec load time.<br>
+        - Implemented state management using Redux, improving application scalability and maintainability.<br>
         `
     },
     {
@@ -103,13 +138,13 @@ const jobs = [
 ]
 
 const projects = [
-    // {
-    //     name: "Scout",
-    //     description: "Find companies that have recently raised funding",
-    //     logo: '/scout.svg',
-    //     url: '/scout',
-    //     tags: ["React", "NextJs", "TailwindCss", "MongoDB"]
-    // },
+    {
+        name: "VS Code Image Optimizer",
+        description: "Visual Studio Code extension for compressing and converting image files to different types, straight in VS Code.",
+        logo: '/io.jpg',
+        url: 'https://marketplace.visualstudio.com/items?itemName=GrishonNganga.image-optimizer',
+        tags: ["VS Code", "Extension", "Typescript"]
+    },
     {
         name: "Barter Africa",
         description: "Protects buyers and sellers from online scammers.",
@@ -221,12 +256,12 @@ export default function Page() {
                                         Jobs History
                                     </div>
                                     <div className="flex gap-x-3 divide-x-2 items-center">
-                                        <div className="w-16 h-full lg:pl-3">
-                                            <a href="https://www.github.com/GrishonNganga" target="_blank">
+                                        <Link prefetch={false} className="w-16 h-full lg:pl-3" href="https://www.github.com/GrishonNganga" target="_blank">
+                                            <div className="">
                                                 <Image width={50} height={50} src="/github.png" alt="Github logo" />
-                                            </a>
-                                        </div>
-                                        <a href="https://drive.google.com/file/d/1YnejEKvCVVOowsDra8zyVPKrgcSXFytU/view?usp=sharing"
+                                            </div>
+                                        </Link>
+                                        <Link prefetch={false} href="https://drive.google.com/file/d/1YnejEKvCVVOowsDra8zyVPKrgcSXFytU/view?usp=sharing"
                                             target="_blank">
                                             <div className="flex items-center pl-3">
                                                 <div className="text-sm text-[#748069] font-bold">
@@ -241,13 +276,14 @@ export default function Page() {
                                                     </svg>
                                                 </div>
                                             </div>
-                                        </a>
-                                        <div className="w-20 h-full pl-3">
-                                            <a href="https://www.linkedin.com/in/grishon-ng-ang-a-8426b5149/"
-                                                target="_blank">
+                                        </Link>
+                                        <Link prefetch={false} className="w-20 h-full pl-3" href="https://www.linkedin.com/in/grishon-ng-ang-a-8426b5149/"
+                                            target="_blank">
+                                            <div>
+
                                                 <Image width={50} height={50} src="/linkedin.png" alt="LinkedIn logo" />
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                                 <Accordion type="single" collapsible className="w-full flex flex-col p-4 divide-y pt-0">
