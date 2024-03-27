@@ -261,7 +261,7 @@ export default function Page() {
                                                 <Image width={50} height={50} src="/github.png" alt="Github logo" />
                                             </div>
                                         </Link>
-                                        <Link prefetch={false} href="https://drive.google.com/file/d/1YnejEKvCVVOowsDra8zyVPKrgcSXFytU/view?usp=sharing"
+                                        <Link prefetch={false} href="https://drive.google.com/file/d/10oRpplxYXJbrHuM_ktHI1VbNojMP2nbk/view?usp=sharing"
                                             target="_blank">
                                             <div className="flex items-center pl-3">
                                                 <div className="text-sm text-[#748069] font-bold">
