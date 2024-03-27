@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel"
 import Image from "next/image";
 
-const images = ["/grish-battlestation.jpeg", "/station-one.jpg", "/station-two.jpg"]
+const images = ["/grish-battlestation.webp", "/station-one.webp", "/station-two.jpg"]
 export default function Page() {
     return (
         <div className="">

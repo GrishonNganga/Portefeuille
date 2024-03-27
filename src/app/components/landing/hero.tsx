@@ -48,6 +48,7 @@ export default function Hero() {
 
     useEffect(() => {
         const onResize = () => {
+            console.log("width", ref.current!.clientWidth, "height", ref.current!.clientHeight)
             setHandWidth(ref.current!.clientWidth)
             setHandHeight(ref.current!.clientHeight)
         };
