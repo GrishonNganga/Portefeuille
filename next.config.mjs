@@ -1,3 +1,5 @@
+import { join } from "path";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -8,7 +10,7 @@ const nextConfig = {
         ]
     },
     experimental: {
-        outputFileTracingRoot: path.join(__dirname, '../posts'),
+        outputFileTracingRoot: join(__dirname, '../posts'),
     },
 };
 
