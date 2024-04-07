@@ -1,9 +1,9 @@
 'use client'
 import { motion } from "framer-motion";
 
-import Layout from "@/app/components/ui/layout";
+import { PageLayout } from "@/app/components/ui/page-layout";
 import Image from "next/image";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import {
     Accordion,
     AccordionContent,
@@ -171,7 +171,7 @@ const projects = [
 export default function Page() {
     return (
         <div className="">
-            <Layout
+            <PageLayout
                 title="Professional"
                 description="I'm a dynamic engineer with 5 years of expertise in full-stack development. My greatest
                             contribution to teams is creative and precision problem solving, collaboration and a
@@ -474,7 +474,7 @@ export default function Page() {
                         </div>
                     </motion.div>
                 </motion.div>
-            </Layout>
+            </PageLayout>
         </div >
     )
 }

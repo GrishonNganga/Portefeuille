@@ -1,7 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 
-import Layout from "@/app/components/ui/layout";
+import { PageLayout } from "@/app/components/ui/page-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ import Image from "next/image";
 export default function Page() {
     return (
         <div className="">
-            <Layout
+            <PageLayout
                 title="Outside Work"
                 description="Some of the things I'm interested in outside work"
                 image="/grish-outsidework.jpg"
@@ -173,7 +173,7 @@ export default function Page() {
                         </Card>
                     </div>
                 </motion.div>
-            </Layout>
+            </PageLayout>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 
-import Layout from "@/app/components/ui/layout";
+import { PageLayout } from "@/app/components/ui/page-layout";
 import {
     Card,
     CardContent,
@@ -51,7 +51,7 @@ const features = [
 export default function Page() {
     return (
         <div className="">
-            <Layout
+            <PageLayout
                 title="Hall of Fame"
                 description="Some of the publications and videos I have been featured in."
                 image="/grish-hallofame.jpeg"
@@ -100,7 +100,7 @@ export default function Page() {
                         </div>
                     </div>
                 </motion.div>
-            </Layout>
+            </PageLayout>
         </div>
     )
 }

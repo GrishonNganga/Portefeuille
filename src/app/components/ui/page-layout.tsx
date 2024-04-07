@@ -17,7 +17,7 @@ const dmono = DM_Mono({
     weight: "300"
 })
 
-export default function Layout({ image, title, description, gradient, children }: { image: string, title: string, description: string, children: React.ReactNode, gradient: string }) {
+export function PageLayout({ image, title, description, gradient, children }: { image: string, title: string, description: string, children: React.ReactNode, gradient: string }) {
     const divRef = useRef(null)
     const [shrinked, setShrinked] = useState(false)
     const { scrollYProgress } = useScroll({

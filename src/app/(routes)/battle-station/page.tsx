@@ -1,7 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 
-import Layout from "@/app/components/ui/layout";
+import { PageLayout } from "@/app/components/ui/page-layout";
 
 import {
     Carousel,
@@ -16,7 +16,7 @@ const images = ["/grish-battlestation.webp", "/station-one.webp", "/station-two.
 export default function Page() {
     return (
         <div className="">
-            <Layout
+            <PageLayout
                 title="Battle Station"
                 description="My current work setup"
                 image="/grish-battlestation.jpeg"
@@ -67,7 +67,7 @@ export default function Page() {
                                 Notebook
                             </div>
                             <div className="flex gap-x-2 border-t border-gray-100 py-3">
-                            <div className="">
+                                <div className="">
                                     6.
                                 </div>
                                 Pen
@@ -93,7 +93,7 @@ export default function Page() {
                         </div>
                     </div>
                 </motion.div>
-            </Layout>
+            </PageLayout>
         </div>
     )
 }
