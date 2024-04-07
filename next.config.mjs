@@ -10,7 +10,7 @@ const nextConfig = {
         ]
     },
     experimental: {
-        outputFileTracingRoot: join(__dirname, '../posts'),
+        outputFileTracingRoot: join(process.cwd(), '../posts'),
     },
 };
 
