@@ -4,6 +4,7 @@ import { IPost } from "../types";
 import { readFileSync, readdirSync } from "fs";
 
 const postsDirectory = join(process.cwd(), "/src/posts");
+console.log("P", postsDirectory)
 export function getPostSlugs() {
   return readdirSync(postsDirectory);
 }
