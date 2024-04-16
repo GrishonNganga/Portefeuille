@@ -146,6 +146,13 @@ const projects = [
         tags: ["VS Code", "Extension", "Typescript"]
     },
     {
+        name: "Arboretum",
+        description: "Helps you find and support tree planting initiatives in Kenya.",
+        logo: '/arboretum.png',
+        url: 'https://arboretum.cloud',
+        tags: ["React", "NextJs", "TailwindCss", "Google Maps API", "MongoDB"]
+    },
+    {
         name: "Barter Africa",
         description: "Protects buyers and sellers from online scammers.",
         logo: '/barter.svg',
@@ -158,13 +165,6 @@ const projects = [
         logo: '/nuru.svg',
         url: 'https://nuruapp.com',
         tags: ["React", "NextJs", "TailwindCss", "ChatGpt", "MongoDB"]
-    },
-    {
-        name: "Geo Spot",
-        description: "Helps me and my friends tag our tree planting photos on a map. (Competition to plant the most trees).",
-        logo: '/geo-spot.png',
-        url: 'https://geo-spot.vercel.app/',
-        tags: ["React", "NextJs", "TailwindCss", "Google Maps API", "MongoDB"]
     },
 ]
 
