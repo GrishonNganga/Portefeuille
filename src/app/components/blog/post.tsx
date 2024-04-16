@@ -40,8 +40,8 @@ type Params = {
     };
 };
 
-export function generateMetadata({ params }: Params): Metadata {
-    const post = getPostBySlug(params.slug);
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+    const post = await getPostBySlug(params.slug);
 
     if (!post) {
         return notFound();
