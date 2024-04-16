@@ -20,16 +20,15 @@ export function getPostBySlug(slug: string) {
     return { ...data, slug: realSlug, content } as IPost;
   }
   console.log("S", slug)
-  return
+  return 
 }
 
-export function getAllPosts(): IPost[] {
+export function getAllPosts(){
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
     .filter(post => post)
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1));
   console.log("PS", posts)
   return posts;
 }
