@@ -3,7 +3,7 @@ import { join } from "path";
 import { IPost } from "../types";
 import { readFileSync, readdirSync } from "fs";
 
-const postsDirectory = join(process.cwd(), "posts");
+const postsDirectory = join(process.cwd(), "/src/posts");
 export function getPostSlugs() {
   return readdirSync(postsDirectory);
 }
