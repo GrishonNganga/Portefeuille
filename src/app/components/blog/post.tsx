@@ -8,7 +8,7 @@ import { PostBody } from "./post-body";
 import { PostHeader } from "./post-header";
 
 export default async function Blog({ params }: Params) {
-    const post = getPostBySlug(params.slug);
+    const post = await getPostBySlug(params.slug);
 
     if (!post) {
         return notFound();
