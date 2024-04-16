@@ -9,7 +9,7 @@ import { PostHeader } from "./post-header";
 
 export default async function Blog({ params }: Params) {
     const post = getPostBySlug(params.slug);
-
+    console.log("P", post)
     if (!post) {
         return notFound();
     }
@@ -42,7 +42,7 @@ type Params = {
 
 export function generateMetadata({ params }: Params): Metadata {
     const post = getPostBySlug(params.slug);
-
+    console.log("P", post)
     if (!post) {
         return notFound();
     }
