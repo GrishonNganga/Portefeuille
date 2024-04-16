@@ -21,7 +21,7 @@ const jobs = [
         headCount: "1-10",
         duration: "Sept 2023 - Present",
         period: "7 mon",
-        image: "/kyakula.jpeg  ",
+        image: "/kyakula.jpeg",
         moreInfo: `
         Food Delivery app based in Kenya. (React, ReactNative Typescript, NodeJS, MongoDB) <br><br>
         
