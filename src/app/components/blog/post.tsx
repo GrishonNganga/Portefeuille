@@ -8,7 +8,7 @@ import { PostBody } from "./post-body";
 import { PostHeader } from "./post-header";
 
 export default async function Blog({ params }: Params) {
-    const post = await getPostBySlug(params.slug);
+    const post = getPostBySlug(params.slug);
 
     if (!post) {
         return notFound();
@@ -40,8 +40,8 @@ type Params = {
     };
 };
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-    const post = await getPostBySlug(params.slug);
+export function generateMetadata({ params }: Params): Metadata {
+    const post = getPostBySlug(params.slug);
 
     if (!post) {
         return notFound();
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-    const posts = await getAllPosts();
+    const posts = getAllPosts();
 
     return posts.map((post: any) => ({
         slug: post.slug,
