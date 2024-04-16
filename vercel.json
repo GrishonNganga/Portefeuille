@@ -3,10 +3,6 @@
         {
           "src": "/posts",
           "dest": "/posts/$1"
-        },
-        {
-          "handle": "filesystem",
-          "src": "/posts/(.*)"
         }
       ]
 }
