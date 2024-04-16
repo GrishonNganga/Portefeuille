@@ -6,7 +6,7 @@ import { readFileSync, readdirSync } from "fs";
 const POSTS = path.resolve(process.cwd(), "src/lib/posts")
 console.log("POSTS", POSTS)
 
-const postsDirectory = join(process.cwd(), "src/posts");
+const postsDirectory = join(process.cwd(), "src/lib/posts");
 export function getPostSlugs() {
   return readdirSync(postsDirectory);
 }
