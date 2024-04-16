@@ -3,10 +3,10 @@ import Container from "./container";
 import { HeroPost } from "./hero-post";
 import { MoreStories } from "./more-stories";
 
-export default function Posts() {
-  const allPosts = getAllPosts();
+export default async function Posts() {
+  const allPosts = await getAllPosts();
 
-  const heroPost = allPosts[0];
+  const heroPost = await allPosts[0];
 
   const morePosts = allPosts.slice(1);
 
