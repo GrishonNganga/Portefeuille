@@ -1,8 +1,13 @@
 {
+    "version": 2,
     "routes": [
         {
-          "src": "/posts",
-          "dest": "/posts/$1"
+            "src": "/posts",
+            "dest": "/posts/$1"
+        },
+        {
+            "handle": "filesystem",
+            "src": "/posts/(.*)"
         }
-      ]
+    ]
 }
