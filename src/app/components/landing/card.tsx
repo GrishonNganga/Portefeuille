@@ -1,4 +1,4 @@
-import { ICard } from "@/lib/types";
+import { Card } from "@/lib/types";
 import clsx from "clsx";
 import { Silkscreen } from "next/font/google";
 
@@ -12,7 +12,7 @@ const silk = Silkscreen({
 })
 
 export interface CardProps {
-    card?: ICard;
+    card?: Card;
     z?: number;
     grayOut?: boolean;
     selectorMax?: number;

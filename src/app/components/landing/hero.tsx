@@ -1,8 +1,8 @@
 'use client'
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Card from "@/app/components/landing/card";
-import { ICard } from "@/lib/types";
+import CardComponent from "@/app/components/landing/card";
+import { Card } from "@/lib/types";
 import Intro from "./intro";
 import { Dices } from "lucide-react";
 import { Boxes } from "@/components/ui/background-boxes";
@@ -10,7 +10,7 @@ import useElementDimensions from "@/lib/hooks/dimensions";
 
 export default function Hero() {
     const ref = useRef<HTMLDivElement | null>(null);
-    const pageCards: ICard[] = [
+    const pageCards: Card[] = [
         {
             src: "/grish-outsidework.webp",
             gradients: ["bg-gradient-to-b from-[#807569] to-[#998E83] opacity-80"],
@@ -42,8 +42,8 @@ export default function Hero() {
             url: "/professional"
         },
     ]
-const {width, height} = useElementDimensions(ref)
-    const [cards, setCards] = useState<ICard[]>(pageCards)
+    const { width, height } = useElementDimensions(ref)
+    const [cards, setCards] = useState<Card[]>(pageCards)
 
 
     function angle(i: number) {
@@ -124,7 +124,7 @@ const {width, height} = useElementDimensions(ref)
                                     height: `${height / (width < 1500 ? 3 : (width < 1920 ? 2.5 : 2))}px`
                                 }}
                             >
-                                <Card
+                                <CardComponent
                                     card={card}
                                 // width={(handWidth / (cards.length))}
                                 />

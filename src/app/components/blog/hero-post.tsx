@@ -1,7 +1,7 @@
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
-import { IAuthor } from "@/lib/types";
+import { Author } from "@/lib/types";
 import { DM_Mono, Silkscreen } from "next/font/google";
 
 const silk = Silkscreen({
@@ -19,7 +19,7 @@ type Props = {
     coverImage: string;
     date: string;
     excerpt: string;
-    author: IAuthor;
+    author: Author;
     slug: string;
 };
 

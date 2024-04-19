@@ -1,4 +1,4 @@
-import { IAuthor } from "@/lib/types";
+import { IAuthor } from "@/lib/types/types";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
