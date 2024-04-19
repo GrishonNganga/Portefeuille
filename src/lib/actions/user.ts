@@ -9,6 +9,8 @@ import JSON5 from 'json5'
 import { createMessages } from "../database/message"
 import OpenAI from "openai"
 
+import { MongoError } from "mongodb"
+
 export const openai = new OpenAI({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
     // dangerouslyAllowBrowser: true
@@ -31,7 +33,8 @@ export const createUserAction = async (data: User) => {
         return JSON.parse(JSON.stringify({ isSuccess, isError, error, data: createdUser }))
     } catch (e) {
         isError = true
-        if (e.code === 11000) {
+        if (e instanceof MongoError && e.code === 11000) {
+            // @ts-ignore
             const field = Object.keys(e.keyPattern)[0]
             error = { message: `User with ${field} already exist` }
         } else {
