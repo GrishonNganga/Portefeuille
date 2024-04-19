@@ -45,5 +45,5 @@ export const generateWeeklyAffirmations = async () => {
     //         }
     //     }
     // })
-    console.log("CALLED")
+    console.log("CRON Triggered")
 }
