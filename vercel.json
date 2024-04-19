@@ -1,8 +1,0 @@
-{
-  "crons": [
-    {
-      "path": "/api/generate-affirmations-cron",
-      "schedule": "* * * * *"
-    }
-  ]
-}
