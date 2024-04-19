@@ -20,7 +20,7 @@ export interface CardProps {
     width?: number
 }
 
-export default function Card(props: CardProps) {
+export default function CardComponent(props: CardProps) {
     const isFace = true
     return (
         <Link prefetch={false} href={props.card!.url}>
