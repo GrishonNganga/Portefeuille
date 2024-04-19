@@ -12,7 +12,7 @@ const getTimeZone = () => {
 }
 
 export default function Join() {
-    const [user, setUser] = useState<User | undefined>({ timezone: getTimeZone() })
+    const [user, setUser] = useState<User | undefined>()
 
     const handleSignup = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -25,7 +25,7 @@ export default function Join() {
             })
             return
         }
-        const { isSuccess, isError, error, data: createdUser } = await createUserAction(user!);
+        const { isSuccess, isError, error, data: createdUser } = await createUserAction({ ...user!, timezone: getTimeZone() });
         if (isSuccess) {
             toast({
                 variant: "success",
