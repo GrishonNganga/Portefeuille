@@ -1,4 +1,4 @@
-import { IAuthor } from "@/lib/types/types";
+import { Author } from "@/lib/types/types";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
@@ -8,7 +8,7 @@ type Props = {
     title: string;
     coverImage: string;
     date: string;
-    author: IAuthor;
+    author: Author;
 };
 
 export function PostHeader({ title, coverImage, date, author }: Props) {
