@@ -1,18 +1,95 @@
+/* markdown-styles.module.css */
+
 .markdown {
-    @apply text-lg leading-relaxed;
+  /* Define styles for paragraphs */
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
 .markdown blockquote {
-    @apply my-6;
+  background-color: #f5f5f5;
+  border-left: 4px solid #007bff;
+  /* Blue color for left border */
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.markdown blockquote p {
+  margin: 0;
+  /* Remove default margin for paragraphs */
+}
+
+.markdown blockquote p:first-child {
+  font-weight: semibold;
+  /* Make the first paragraph bold */
+}
+
+.markdown h1 {
+  /* Styles for heading level 1 */
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 
 .markdown h2 {
-    @apply text-3xl mt-12 mb-4 leading-snug;
+  /* Styles for heading level 2 */
+  font-size: 1.8rem;
+  font-weight: 600;
+  /* margin-bottom: 0.8rem; */
+  /* background: red; */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .markdown h3 {
-    @apply text-2xl mt-8 mb-4 leading-snug;
+  /* Styles for heading level 3 */
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.markdown p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* background-color: red; */
+}
+
+.markdown p code {
+  /* Styles for inline code within paragraphs */
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.markdown pre {
+  /* Styles for code blocks */
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.markdown pre code {
+  /* Styles for code blocks */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.markdown a {
+  color: #007bff;
+  /* Blue color */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+/* Apply styles to links on hover */
+.markdown a:hover {
+  text-decoration: underline;
+  /* Add underline on hover */
+}
+
+/* Apply styles to visited links */
+.markdown a:visited {
+  color: purple;
+  /* Change color for visited links */
 }

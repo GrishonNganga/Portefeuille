@@ -8,6 +8,9 @@ const messageSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
+    },
+    sent: {
+        type: Date,
     }
 }, { timestamps: true });
 

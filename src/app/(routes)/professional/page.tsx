@@ -139,6 +139,13 @@ const jobs = [
 
 const projects = [
     {
+        name: "Bytesize",
+        description: "Transform Your Podcasts into short form social media clips",
+        logo: '/bytesize.svg',
+        url: 'https://bytesize.cc',
+        tags: ["React", "TailwindCss", "NodeJS", "Express", "MongoDB"]
+    },
+    {
         name: "VS Code Image Optimizer",
         description: "Visual Studio Code extension for compressing and converting image files to different types, straight in VS Code.",
         logo: '/io.jpg',
@@ -151,13 +158,6 @@ const projects = [
         logo: '/arboretum.png',
         url: 'https://arboretum.cloud',
         tags: ["React", "NextJs", "TailwindCss", "Google Maps API", "MongoDB"]
-    },
-    {
-        name: "Barter Africa",
-        description: "Protects buyers and sellers from online scammers.",
-        logo: '/barter.svg',
-        url: 'https://bartr.africa',
-        tags: ["React", "NextJs", "TailwindCss", "MongoDB"]
     },
     {
         name: "Nuru",

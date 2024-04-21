@@ -10,11 +10,7 @@ import { createMessages } from "../database/message"
 import OpenAI from "openai"
 
 import { MongoError } from "mongodb"
-
-export const openai = new OpenAI({
-    apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-    // dangerouslyAllowBrowser: true
-});
+import { chatCompletion } from "../api/affirmations"
 
 export const createUserAction = async (data: User) => {
     const conn = await dbConnect()
@@ -42,20 +38,6 @@ export const createUserAction = async (data: User) => {
         }
         return JSON.parse(JSON.stringify({ isSuccess, isError, error, data: createdUser }))
     }
-}
-
-export async function chatCompletion(content: ChatCompletionMessageParam[], options: Object) {
-    return await openai.chat.completions.create({
-        model: 'gpt-3.5-turbo',
-        messages: content,
-        stream: false,
-        ...options
-    })
-        .then((response) => response)
-        .catch((error) => {
-            console.log(error)
-            return error.response;
-        });
 }
 
 export const generatePromptForUser = async (user: User) => {

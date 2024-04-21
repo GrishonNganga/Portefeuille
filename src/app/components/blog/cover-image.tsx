@@ -14,7 +14,7 @@ const CoverImage = ({ title, src, slug, isHero }: Props) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
+      className={cn("shadow-sm object-cover w-full h-full", {
         "hover:shadow-lg transition-shadow duration-200 rounded-t-md": slug,
 
       }, isHero ? "lg:rounded-tr-none lg:rounded-l-md" : "")}
@@ -23,7 +23,7 @@ const CoverImage = ({ title, src, slug, isHero }: Props) => {
     />
   );
   return (
-    <div className="sm:mx-0">
+    <div className="sm:mx-0 h-full">
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
           {image}

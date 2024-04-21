@@ -7,7 +7,7 @@ import Header from "@/app/components/blog/header";
 import { PostBody } from "./post-body";
 import { PostHeader } from "./post-header";
 
-export default async function Blog({ params }: Params) {
+export default async function Post({ params }: Params) {
     const post = getPostBySlug(params.slug);
     if (!post) {
         return notFound();
