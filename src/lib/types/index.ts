@@ -1,5 +1,25 @@
 import { ObjectId } from "mongoose"
 
+export type Job = {
+    companyName: string,
+    role: string,
+    website: string,
+    location: string,
+    headCount: string,
+    duration: string,
+    period: string,
+    image: string,
+    moreInfo: string,
+}
+
+export type Project = {
+    name: string,
+    description: string,
+    logo: string,
+    url: string,
+    tags: string[]
+}
+
 export type User = {
     _id?: ObjectId;
     firstname: string;
