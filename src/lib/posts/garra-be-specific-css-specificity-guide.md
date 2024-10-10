@@ -11,10 +11,13 @@ excerpt: "Ever wondered why your CSS styles aren't working as expected? Dive int
 ogImage: {
     url: "/public/blog/standardize-gpt.svg"
 }
-coverImage: "https://i.postimg.cc/8CwjV3vb/DALL-E-2024-10-10-08-04-04-A-fun-and-engaging-blog-thumbnail-design-about-CSS-specificity-The-ima.png"
+coverImage: "https://i.postimg.cc/J76H0Kxh/file.png"
 preview: true
 
 ---
+
+<!-- TLDR: Watch video instead [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/KLDZiwIFhEc/0.jpg)](https://www.youtube.com/watch?v=FRM6M7fb8Cw) -->
+
 
 # Garra Be Specific, Bro: My Journey into the World of CSS Specificity (with a Dash of Humor)
 
