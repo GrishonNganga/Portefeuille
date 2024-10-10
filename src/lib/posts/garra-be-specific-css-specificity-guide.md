@@ -6,7 +6,7 @@ author: {
   picture: "https://avatars.githubusercontent.com/u/52824774?v=4"
 } 
 
-date: "2024-04-20 08:00:00"
+date: "2024-10-10 08:00:00"
 excerpt: "Ever wondered why your CSS styles aren't working as expected? Dive into the world of CSS specificity! In this post, I break down the hierarchy of selectors, share insights from my Rendercon 2024 talk. Say goodbye to style conflicts and hello to clean, manageable CSS!"
 ogImage: {
     url: "/public/blog/standardize-gpt.svg"
@@ -86,7 +86,3 @@ Go ahead and check out **[specificity.grish.xyz](https://specificity.grish.xyz)*
 Thanks for reading, until next time, 
 
 Kwaheri.
----
-
-**Author: Grishon Nganga**  
-Engineer, CSS evangelist, meme connoisseur, and creator of specificity.grish.xyz. Always ready to debug CSS and bring a little humor to the front-end world. Follow me at **@GrishonNganga** for more coding adventures!
