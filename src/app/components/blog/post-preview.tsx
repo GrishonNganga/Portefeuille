@@ -44,8 +44,8 @@ export function PostPreview({
         <div>
           <h3 className={`mb-2 lg:mb-4 text-xl lg:text-3xl leading-tight font-bold text-[#4c5544] ${silk.className}`}>
             <Link
-              as={`/posts/${slug}`}
-              href="/posts/[slug]"
+              as={`/blog/${slug}`}
+              href="/blog/[slug]"
               className=""
             >
               {title}
