@@ -15,6 +15,12 @@ import Link from "next/link";
 
 const features = [
     {
+        image: "/grish-rendercon.jpg",
+        title: "Garra be specific - A guide to CSS Specificity",
+        description: "Based on the talk I gave on CSS Specificity at Rendercon Kenya 2024 at CUEA University.",
+        link: "/blog/garra-be-specific-css-specificity-guide"
+    },
+    {
         image: "/grish-youngtechiez.webp",
         title: "Young Techies Podcast Interview",
         description: "In the series 'Behind the curtains', I shared a bit about my journey in Tech with Phyian Karinge.",
@@ -52,7 +58,7 @@ export default function Page() {
         <div className="">
             <PageLayout
                 title="Hall of Fame"
-                description="Some of the publications and videos I have been featured in."
+                description="Some of the talks, publications and videos I have been featured in."
                 image="/grish-hallofame.jpeg"
                 gradient="bg-gradient-to-b from-[#697480] to-[#838E99] opacity-80"
 
