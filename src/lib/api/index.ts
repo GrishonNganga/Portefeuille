@@ -24,6 +24,5 @@ export function getAllPosts(): Post[] {
     .map((slug) => (slug.endsWith('.md') && getPostBySlug(slug)))
     .filter((post): post is Post => !!post)
     .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1));
-  // console.log("PS", posts)
   return posts;
 }

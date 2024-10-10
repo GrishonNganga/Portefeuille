@@ -6,6 +6,22 @@ import JobsSectionLinks from "./jobs-section-links"
 
 const jobs: Job[] = [
     {
+        companyName: "Cigna Healthcare",
+        role: "Senior Frontend Engineer",
+        website: "cigna.com",
+        location: "Bloomfield, CT, USA",
+        headCount: "10K+",
+        duration: "Aug 2024 - Present",
+        period: "2 mon",
+        image: "/cigna.png",
+        moreInfo: `
+        Global health benefits provider. (React, ReactNative Typescript) <br><br>
+        
+        <b>Responsibilities:</b> <br>
+        - Part of DigiEye squad responsible for delivering health benefits app for the KSA market. <br>
+        `
+    },
+    {
         companyName: "Kyakula",
         role: "Frontend Developer",
         website: "mautamu.com",

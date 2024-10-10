@@ -9,7 +9,7 @@ export default function JobsSectionLinks() {
                     <Image width={50} height={50} src="/github.png" alt="Github logo" />
                 </div>
             </Link>
-            <Link prefetch={false} href="https://drive.google.com/file/d/10oRpplxYXJbrHuM_ktHI1VbNojMP2nbk/view?usp=sharing"
+            <Link prefetch={false} href="https://drive.google.com/file/d/10kmeL7cBiy2Ah7ZW5I9-nSqn8m1RJFEQ/view?usp=sharing"
                 target="_blank">
                 <div className="flex items-center pl-3">
                     <div className="text-sm text-[#748069] font-bold">
@@ -25,7 +25,7 @@ export default function JobsSectionLinks() {
                     </div>
                 </div>
             </Link>
-            <Link prefetch={false} className="w-20 h-full pl-3" href="https://www.linkedin.com/in/grishon-ng-ang-a-8426b5149/"
+            <Link prefetch={false} className="w-20 h-full pl-3" href="https://www.linkedin.com/in/grishon-nganga/"
                 target="_blank">
                 <div>
 
