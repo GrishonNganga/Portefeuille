@@ -4,9 +4,16 @@ import ProjectsList from "./projects-list";
 
 const projects: Project[] = [
     {
+        name: "CSS Specificity",
+        description: "Tool to help you visualize CSS Specificity algorithm. (Built for my Rendercon 2024 talk on CSS Specificity)",
+        logo: '/specificity.png',
+        url: 'https://specificity.grish.xyz',
+        tags: ["React", "TailwindCss"]
+    },
+    {
         name: "Bytesize",
         description: "Transform Your Podcasts into short form social media clips",
-        logo: '/bytesize.svg',
+        logo: '/bytesize.png',
         url: 'https://bytesize.cc',
         tags: ["React", "TailwindCss", "NodeJS", "Express", "MongoDB"]
     },

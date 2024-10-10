@@ -5,7 +5,8 @@ const nextConfig = {
             "res.cloudinary.com",
             "cdn.aglty.io",
             "media.licdn.com",
-            "avatars.githubusercontent.com"
+            "avatars.githubusercontent.com",
+            "i.postimg.cc"
         ]
     }
 };
