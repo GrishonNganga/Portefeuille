@@ -18,11 +18,11 @@ export default function Intro() {
             initial={{ y: '-100vh' }}
             animate={{ y: 0 }}
         >
-            <div data-splitting className={`lg:text-4xl text-center text-xl md:text-5xl text-[#F9FFF2] font-extrabold tracking-wider ${silk.className}  z-[100]`}>
+            <div data-splitting className={`lg:text-4xl text-center text-xl md:text-5xl text-[#4c5544] font-extrabold tracking-wider ${silk.className}  z-[100]`}>
                 Grishon Ng&apos;ang&apos;a
             </div>
             <div
-                className={`flex flex-col mt-5 items-center text-[#F9FFF2] text-sm lg:text-lg tracking-wider font-dmono appearFromTop ${dmono.className} z-[100]`}>
+                className={`flex flex-col mt-5 items-center text-[#4c5544] text-sm lg:text-lg tracking-wider font-dmono appearFromTop ${dmono.className} z-[100]`}>
                 <div>
                     Full Stack Software Engineer
                 </div>

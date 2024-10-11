@@ -1,11 +1,11 @@
 'use client'
 import { AnimatePresence, motion, Variants } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import CardComponent from "@/app/components/landing/card";
 import { Card } from "@/lib/types";
 import Intro from "./intro";
+import TopNav from "./top-nav"
 import { Dices } from "lucide-react";
-import { Boxes } from "@/components/ui/background-boxes";
 import useElementDimensions from "@/lib/hooks/dimensions";
 
 export default function Hero() {
@@ -84,12 +84,9 @@ export default function Hero() {
     }
     return (
         <div ref={ref} className="h-dvh w-full md:p-8">
-            <div className="w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#4c5544] to-[#748069] md:rounded-md relative">
-                <div className="absolute inset-0 w-full h-full bg-slate-900 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-                <div className="absolute top-0 w-full h-full">
-                    <Boxes />
-                </div>
+            <div className="w-full h-full flex flex-col justify-between overflow-hidden md:rounded-lg relative bg-green-50 shadow-md shadow-green-50">
                 <Intro />
+                <TopNav/>
                 <motion.div layoutId={Math.random().toString()}
                     className="relative lg:h-1/2 h-full flex items-end justify-center">
                     <div className="lg:hidden absolute h-full">

@@ -4,9 +4,9 @@ import Link from "next/link"
 export default function JobsSectionLinks() {
     return (
         <div className="flex gap-x-3 divide-x-2 items-center">
-            <Link prefetch={false} className="w-16 h-full lg:pl-3" href="https://www.github.com/GrishonNganga" target="_blank">
+            <Link prefetch={false} className="w-20 h-full lg:pl-3" href="https://www.github.com/GrishonNganga" target="_blank">
                 <div className="">
-                    <Image width={50} height={50} src="/github.png" alt="Github logo" />
+                    <Image width={100} height={100} src="/github.png" alt="Github logo" />
                 </div>
             </Link>
             <Link prefetch={false} href="https://drive.google.com/file/d/10kmeL7cBiy2Ah7ZW5I9-nSqn8m1RJFEQ/view?usp=sharing"
@@ -29,7 +29,7 @@ export default function JobsSectionLinks() {
                 target="_blank">
                 <div>
 
-                    <Image width={50} height={50} src="/linkedin.png" alt="LinkedIn logo" />
+                    <Image width={100} height={100} className="w-20" src="/linkedin.png" alt="LinkedIn logo" />
                 </div>
             </Link>
         </div>

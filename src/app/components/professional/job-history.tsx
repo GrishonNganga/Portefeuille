@@ -4,6 +4,17 @@ import { Job } from "@/lib/types"
 import JobList from "./job-list"
 import JobsSectionLinks from "./jobs-section-links"
 
+import { DM_Mono, Silkscreen } from "next/font/google";
+
+const silk = Silkscreen({
+    subsets: ["latin"],
+    weight: "400"
+})
+
+const dmono = DM_Mono({
+    subsets: ["latin"],
+    weight: "300"
+})
 const jobs: Job[] = [
     {
         companyName: "Cigna Healthcare",
@@ -146,14 +157,19 @@ const jobs: Job[] = [
 
 export default function JobHistory() {
     return (
-        <div className="w-full h-min border rounded-xl flex flex-col mb-20">
-            <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center border-b p-4">
-                <div className="text-lg lg:text-base text-[#748069] font-bold">
-                    Jobs History
+        <div className="w-full flex flex-col mb-20 sticky top-40">
+            {/* Sticky Work History Header */}
+            <div className="bg-green-50 p-4">
+                <div className={`text-2xl lg:text-6xl text-[#748069] font-bold ${silk.className}`}>
+                    Work History<span className="text-[#4c5544]">.</span>
                 </div>
                 <JobsSectionLinks />
             </div>
-            <JobList jobs={jobs} />
+
+            {/* Scrollable Job List */}
+            <div className="overflow-y-auto h-[calc(75vh)] px-4 gap-y-20 scrollbar-hide">
+                <JobList jobs={jobs} />
+            </div>
         </div>
     )
 }

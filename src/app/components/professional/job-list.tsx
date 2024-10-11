@@ -10,14 +10,10 @@ type JobListProps = {
 
 export default function JobList({ jobs }: JobListProps) {
     return (
-        <Accordion type="single" collapsible className="w-full flex flex-col p-4 divide-y pt-0">
-            {
-                jobs.map((job, idx) => {
-                    return (
-                        <JobCard key={idx} idx={idx} job={job} />
-                    )
-                })
-            }
-        </Accordion>
+        <div className="flex flex-col gap-y-20 pl-5 pt-5 mb-60 bg-green-500">
+            {jobs.map((job, idx) => (
+                <JobCard key={idx} idx={idx} job={job} />
+            ))}
+        </div>
     )
 }
