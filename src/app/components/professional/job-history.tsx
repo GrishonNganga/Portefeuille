@@ -18,6 +18,7 @@ const dmono = DM_Mono({
 const jobs: Job[] = [
     {
         companyName: "Cigna Healthcare",
+        backgroundColor: "bg-blue-500",
         role: "Senior Frontend Engineer",
         website: "cigna.com",
         location: "Bloomfield, CT, USA",
@@ -34,6 +35,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Kyakula",
+        backgroundColor: "bg-orange-500",
         role: "Frontend Developer",
         website: "mautamu.com",
         location: "Nairobi, Kenya",
@@ -52,6 +54,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Chromelot Media LLC",
+        backgroundColor: "bg-red-500",
         role: "Full Stack Software Engineer",
         website: "chromelot.com",
         location: "McKinney, Texas, USA",
@@ -71,6 +74,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Adanian Labs",
+        backgroundColor: "bg-cyan-500",
         role: "Senior Frontend Engineer",
         website: "adanianlabs.io",
         location: "Nairobi, Kenya",
@@ -89,6 +93,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Legal Space",
+        backgroundColor: "bg-green-500",
         role: "Frontend Engineer",
         website: "legalspace.app",
         location: "Lusaka, Zambia",
@@ -106,6 +111,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Bloow Global",
+        backgroundColor: "bg-blue-300",
         role: "Frontend Engineer",
         website: "bloowafrica.com",
         location: "Nairobi, Kenya",
@@ -124,6 +130,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Fiverr",
+        backgroundColor: "bg-green-300",
         role: "Freelance Full Stack Engineer",
         website: "fiverr.com",
         location: "Nairobi, Kenya",
@@ -137,6 +144,7 @@ const jobs: Job[] = [
     },
     {
         companyName: "Rently LLC",
+        backgroundColor: "bg-blue-500",
         role: "Co Founder",
         website: "rently.ke",
         location: "Nairobi, Kenya",
@@ -157,9 +165,9 @@ const jobs: Job[] = [
 
 export default function JobHistory() {
     return (
-        <div className="w-full flex flex-col mb-20 sticky top-40">
+        <div className="w-full flex flex-col">
             {/* Sticky Work History Header */}
-            <div className="bg-green-50 p-4">
+            <div className="bg-green-50 p-4 sticky top-0 z-100">
                 <div className={`text-2xl lg:text-6xl text-[#748069] font-bold ${silk.className}`}>
                     Work History<span className="text-[#4c5544]">.</span>
                 </div>
@@ -167,7 +175,7 @@ export default function JobHistory() {
             </div>
 
             {/* Scrollable Job List */}
-            <div className="overflow-y-auto h-[calc(75vh)] px-4 gap-y-20 scrollbar-hide">
+            <div className="px-4 gap-y-20 w-full">
                 <JobList jobs={jobs} />
             </div>
         </div>

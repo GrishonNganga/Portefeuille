@@ -1,19 +1,32 @@
-import {
-    Accordion,
-} from "@/components/ui/accordion"
-import { Job } from "@/lib/types"
-import JobCard from "./job-card"
+import { Job } from "@/lib/types";
+import JobCard from "./job-card";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 type JobListProps = {
-    jobs: Job[]
-}
+    jobs: Job[];
+};
 
 export default function JobList({ jobs }: JobListProps) {
+    const container = useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: container
+    });
+
+    const scale = useTransform(scrollYProgress, [1, 0], [1, 0])
+    useEffect(() => {
+        scrollYProgress.on("change", e => console.log("Scroll Y", scrollYProgress))
+    }, [])
     return (
-        <div className="flex flex-col gap-y-20 pl-5 pt-5 mb-60 bg-green-500">
+        <motion.div
+            ref={container}
+            className="flex flex-col gap-y-10 bg-red-500"
+
+        >
             {jobs.map((job, idx) => (
                 <JobCard key={idx} idx={idx} job={job} />
             ))}
-        </div>
-    )
+        </motion.div>
+    );
 }

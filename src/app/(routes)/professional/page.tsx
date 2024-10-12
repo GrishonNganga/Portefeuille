@@ -9,12 +9,13 @@ import Projects from "@/app/components/professional/projects";
 
 export default function Page() {
     return (
-        <PageLayout>
-            {/* <ProgrammingLanguages /> */}
-
+        <PageLayout backgroundColor="bg-green-50">
             <JobHistory />
             <JobHistory />
-            <JobHistory />
+            {/* <JobHistory /> */}
+            <div className="mb-[25vh]">
+                
+            </div>
         </PageLayout>
     )
 }

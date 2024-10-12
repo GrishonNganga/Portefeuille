@@ -2,6 +2,7 @@ import { ObjectId } from "mongoose"
 
 export type Job = {
     companyName: string,
+    backgroundColor: string;
     role: string,
     website: string,
     location: string,

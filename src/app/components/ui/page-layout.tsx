@@ -1,11 +1,8 @@
 'use client'
-import { X } from "lucide-react"
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
+import { useScroll, motion } from "framer-motion"
+import { useRef, useEffect } from "react"
+
 import { DM_Mono, Silkscreen } from "next/font/google";
-import React, { useEffect, useRef, useState } from "react";
-import useElementDimensions from "@/lib/hooks/dimensions";
 import TopNav from "../landing/top-nav";
 
 const silk = Silkscreen({
@@ -18,18 +15,27 @@ const dmono = DM_Mono({
     weight: "300"
 })
 
-export function PageLayout({ children }: { children: React.ReactNode }) {
+export function PageLayout({ children, backgroundColor }: { children: React.ReactNode, backgroundColor: string }) {
+    const layoutRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: layoutRef
+    })
+
+   useEffect(() => {
+        scrollYProgress.on("change", e => console.log("Scroll Y", scrollYProgress))
+    }, [])
 
     return (
-        <div className="h-dvh w-full md:p-8">
-            <div className="w-full h-full flex flex-col overflow-scroll md:rounded-lg relative bg-green-50 shadow-md shadow-green-50 scrollbar-hide">
+        <motion.div className="h-dvh w-full md:p-8">
+            <div className={`w-full h-full flex flex-col overflow-hidden md:rounded-lg relative ${backgroundColor} shadow-md`}>
                 <div>
                     <TopNav />
                 </div>
-                <div className="container mx-auto">
+                <motion.div ref={layoutRef} className="container mx-auto overflow-scroll">
                     {children}
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
