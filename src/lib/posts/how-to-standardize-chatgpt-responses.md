@@ -1,5 +1,5 @@
 ---
-title: "How to stadardize ChatGPT responses with functions"
+title: "How to standardize ChatGPT responses with functions"
 description: "Are you using chatgpt completions api and struggling to get in a structured format? In this article, I take you through how you can reliably get structured data back from your chatgpt models."
 author: {
   name: "Grishon Ng'ang'a",
