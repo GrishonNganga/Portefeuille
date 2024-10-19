@@ -1,6 +1,12 @@
 
 import { Project } from "@/lib/types";
 import ProjectsList from "./projects-list";
+import {  Silkscreen } from "next/font/google";
+
+const silk = Silkscreen({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const projects: Project[] = [
     {
@@ -42,13 +48,16 @@ const projects: Project[] = [
 
 export default function Projects() {
     return (
-        <div className="w-full h-min border rounded-xl flex flex-col mb-20">
-            <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center border-b p-4">
-                <div className="text-lg lg:text-base text-[#748069] font-bold">
-                    Projects
-                </div>
-            </div>
-            <ProjectsList projects={projects} />
+        <div className="w-full h-full flex flex-col">
+      <div className="">
+        <div
+          className={`bg-% text-3xl lg:text-6xl text-[#748069] font-bold ${silk.className}`}
+        >
+          Projects<span className="text-[#4c5544]">.</span>
         </div>
+        {/* <JobsSectionLinks /> */}
+      </div>
+      <ProjectsList projects={projects} /> 
+    </div>
     )
 }

@@ -7,7 +7,7 @@ type ProjectsListProps = {
 
 export default function ProjectsList({ projects }: ProjectsListProps) {
     return (
-        <div className="w-full flex flex-col gap-y-3 divide-y p-5">
+        <div className="w-full flex flex-col gap-y-3 divide-y md:p-5 pb-40">
             {
                 projects.map((project, idx) => (
                     <ProjectCard key={idx} project={project} />

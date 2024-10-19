@@ -37,12 +37,12 @@ export function PostPreview({
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <div className="flex flex-col pl-5 pt-5 mb-5">
-        <div className="mb-2 lg:mb-4 md:mb-0 text-xs lg:text-base">
+      <div className="flex flex-col pl-5 mb-5">
+        <div className="mb-2  text-xs lg:text-base">
           <DateFormatter dateString={date} />
         </div>
         <div>
-          <h3 className={`mb-2 lg:mb-4 text-xl lg:text-3xl leading-tight font-bold text-[#4c5544] ${silk.className}`}>
+          <h3 className={`mb-2 lg:mb-4 text-xl lg:text-2xl leading-tight font-bold text-[#4c5544] ${silk.className}`}>
             <Link
               as={`/blog/${slug}`}
               href="/blog/[slug]"
@@ -53,7 +53,7 @@ export function PostPreview({
           </h3>
         </div>
         <div className="pr-5">
-          <p className={`text-lg leading-relaxed mb-4 ${dmono.className}`}>{excerpt}</p>
+          <p className={`leading-relaxed mb-4 ${dmono.className}`}>{excerpt}</p>
         </div>
         <Avatar name={author.name} picture={author.picture} />
       </div>

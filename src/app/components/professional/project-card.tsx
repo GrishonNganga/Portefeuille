@@ -11,7 +11,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <div className="flex flex-col gap-y-2 p-5">
+        <div className="flex flex-col gap-y-2 py-2 md:p-5">
             <div className="w-20">
                 <Image src={project.logo} width={100} height={100} alt="Fiverr logo" />
             </div>

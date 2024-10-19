@@ -1,41 +1,40 @@
-'use client'
-import { useScroll, motion } from "framer-motion"
-import { useRef, useEffect } from "react"
+"use client";
 
 import { DM_Mono, Silkscreen } from "next/font/google";
 import TopNav from "../landing/top-nav";
+import { cloneElement, useRef } from "react";
+import React from "react";
 
 const silk = Silkscreen({
-    subsets: ["latin"],
-    weight: "400"
-})
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const dmono = DM_Mono({
-    subsets: ["latin"],
-    weight: "300"
-})
+  subsets: ["latin"],
+  weight: "300",
+});
 
-export function PageLayout({ children, backgroundColor }: { children: React.ReactNode, backgroundColor: string }) {
-    const layoutRef = useRef(null);
+export function PageLayout({
+  children,
+  backgroundColor,
+}: {
+  children: React.ReactNode;
+  backgroundColor: string;
+}) {
 
-    const { scrollYProgress } = useScroll({
-        target: layoutRef
-    })
-
-   useEffect(() => {
-        scrollYProgress.on("change", e => console.log("Scroll Y", scrollYProgress))
-    }, [])
-
-    return (
-        <motion.div className="h-dvh w-full md:p-8">
-            <div className={`w-full h-full flex flex-col overflow-hidden md:rounded-lg relative ${backgroundColor} shadow-md`}>
-                <div>
-                    <TopNav />
-                </div>
-                <motion.div ref={layoutRef} className="container mx-auto overflow-scroll">
-                    {children}
-                </motion.div>
+  return (
+    <div className="w-full h-dvh md:p-8">
+      <div className={`${backgroundColor} h-full rounded-md shadow-md overflow-hidden`}> 
+        <TopNav />
+        <div className="relative w-full h-full overflow-y-auto">
+          <div className=" absolute top-0 left-0 w-full h-full">
+            <div className="w-full h-full container">
+            {children}
             </div>
-        </motion.div>
-    )
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

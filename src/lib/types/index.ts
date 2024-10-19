@@ -4,6 +4,7 @@ export type Job = {
     companyName: string,
     backgroundColor: string;
     role: string,
+    languages: string,
     website: string,
     location: string,
     headCount: string,
