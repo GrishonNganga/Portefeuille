@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
             <p className="text-gray-600 mb-6">
               Last updated: {new Date().toLocaleDateString()}
             </p>
-            
+
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">1. Introduction</h2>
               <p className="text-gray-600">
@@ -48,9 +48,9 @@ export default function PrivacyPolicy() {
               <ul className="list-disc pl-6 mt-2 text-gray-600">
                 <li>Provide and improve our DM automation services</li>
                 <li>Manage and respond to Instagram direct messages on your behalf</li>
-                <li>Analyze usage patterns to enhance our app's functionality</li>
+                <li>Analyze usage patterns to enhance our app&apos;s functionality</li>
                 <li>Communicate with you about your account and our services</li>
-                <li>Ensure compliance with Instagram's and Facebook's policies</li>
+                <li>Ensure compliance with Instagram&apos;s and Facebook&apos;s policies</li>
                 <li>Prevent fraud and unauthorized access</li>
               </ul>
             </section>
@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
                 We do not sell your personal information. We may share your information in the following circumstances:
               </p>
               <ul className="list-disc pl-6 mt-2 text-gray-600">
-                <li>With Instagram and Facebook, as required for our app's functionality</li>
+                <li>With Instagram and Facebook, as required for our app&apos;s functionality</li>
                 <li>With service providers who help us operate our business</li>
                 <li>In response to legal requests or to prevent harm, as required by law</li>
                 <li>With your explicit consent for any other purpose</li>
@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">8. Changes to This Policy</h2>
               <p className="text-gray-600">
-                We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
               </p>
             </section>
 
@@ -126,4 +126,3 @@ export default function PrivacyPolicy() {
     </div>
   )
 }
-
