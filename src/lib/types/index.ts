@@ -47,7 +47,8 @@ export type Card = {
     src: string,
     gradients: string[],
     title: string,
-    url: string
+    url: string,
+    id?: number
 }
 
 export type Author = {
